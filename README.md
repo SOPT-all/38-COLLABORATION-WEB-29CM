@@ -1,0 +1,2 @@
+# 38-COLLABORATION-WEB-29CM
+LETS SOPT 38기 합동세미나 데스크탑 WEB 2조 29cm 🛒

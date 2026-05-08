@@ -3,25 +3,25 @@ version: 1
 labels:
   # 브랜치 기반
   - label: "⭐ Feature"
-    branch: "(feat|feature)/.*"
+    branch: "^(feat|feature)/.*$"
 
   - label: "🎨 Style"
-    branch: "(style)/.*"
+    branch: "^(style)/.*$"
 
   - label: "⚙️ Init"
-    branch: "(init)/.*"
+    branch: "^(init)/.*$"
 
-  - label: "🔄️ Refactor"
-    branch: "(refactor)/.*"
+  - label: "🔄 Refactor"
+    branch: "^(refactor)/.*$"
 
   - label: "🔗 API"
-    branch: "(api)/.*"
+    branch: "^(api)/.*$"
 
-  - label: "🔨 Fix"
-    branch: "(fix|hotfix)/.*"
+  - label: "🔧 Fix"
+    branch: "^(fix|hotfix)/.*$"
 
   - label: "🚀 Deploy"
-    branch: "(deploy|release)/.*"
+    branch: "^(deploy|release)/.*$"
 
   # 작성자 기반
   - label: "🐯 채원"

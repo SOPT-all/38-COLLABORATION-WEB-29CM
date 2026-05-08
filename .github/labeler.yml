@@ -11,13 +11,13 @@ labels:
   - label: "⚙️ Init"
     branch: "(init)/.*"
 
-  - label: "🔄 Refactor"
+  - label: "🔄️ Refactor"
     branch: "(refactor)/.*"
 
   - label: "🔗 API"
     branch: "(api)/.*"
 
-  - label: "🔧 Fix"
+  - label: "🔨 Fix"
     branch: "(fix|hotfix)/.*"
 
   - label: "🚀 Deploy"

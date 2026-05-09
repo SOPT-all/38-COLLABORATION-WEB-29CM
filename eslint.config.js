@@ -39,7 +39,13 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
-      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+      {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+      },
+      ],
       '@typescript-eslint/explicit-function-return-type': 'off',
       'react/self-closing-comp': 'warn',
       'no-var': 'error',

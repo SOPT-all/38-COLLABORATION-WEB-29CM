@@ -44,6 +44,7 @@ export default [
       'react/self-closing-comp': 'warn',
       'no-var': 'error',
       'prefer-const': 'warn',
+      'prefer-template': 'warn',
     },
   },
   prettier,

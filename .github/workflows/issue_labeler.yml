@@ -1,0 +1,25 @@
+name: "Issue Labeler"
+
+permissions:
+  contents: read
+  issues: write
+
+on:
+  issues:
+    types:
+      - opened
+      - reopened
+      - edited
+
+jobs:
+  labeler:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: srvaroa/labeler@v1.13.0
+        with:
+          config_path: .github/labeler.yml
+          use_local_config: true
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"

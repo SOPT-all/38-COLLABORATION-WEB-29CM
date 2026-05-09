@@ -12,9 +12,14 @@
     "@trivago/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss"
   ],
-  "importOrder": ["^react", "<THIRD_PARTY_MODULES>", "^@app/",
-  "^@pages/",
-  "^@shared/", "^[./]"],
+  "importOrder": [
+    "^react",
+    "<THIRD_PARTY_MODULES>",
+    "^@app/",
+    "^@pages/",
+    "^@shared/",
+    "^[./]"
+  ],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true
 }

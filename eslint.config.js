@@ -41,10 +41,10 @@ export default [
       ],
       '@typescript-eslint/no-unused-vars': [
         'error',
-      {
+        {
           argsIgnorePattern: '^_',
           varsIgnorePattern: '^_',
-      },
+        },
       ],
       '@typescript-eslint/explicit-function-return-type': 'off',
       'react/self-closing-comp': 'warn',

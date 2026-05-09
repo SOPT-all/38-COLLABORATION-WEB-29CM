@@ -6,7 +6,6 @@
     "module": "esnext",
     "types": ["vite/client"],
     "paths": {
-      "@/*": ["./src/*"],
       "@app/*": ["./src/app/*"],
       "@pages/*": ["./src/pages/*"],
       "@shared/*": ["./src/shared/*"]

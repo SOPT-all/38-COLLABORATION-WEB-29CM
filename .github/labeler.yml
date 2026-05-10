@@ -2,26 +2,26 @@ version: 1
 
 labels:
   # 브랜치 기반
-  - label: "⭐ Feature"
-    branch: "^(feat|feature)/.*$"
+  - label: '⭐ Feature'
+    branch: '^(feat|feature)/.*$'
 
-  - label: "🎨 Style"
-    branch: "^(style)/.*$"
+  - label: '🎨 Style'
+    branch: '^(style)/.*$'
 
-  - label: "⚙️ Init"
-    branch: "^(init)/.*$"
+  - label: '⚙️ Init'
+    branch: '^(init)/.*$'
 
-  - label: "🔄 Refactor"
-    branch: "^(refactor)/.*$"
+  - label: '🔄 Refactor'
+    branch: '^(refactor)/.*$'
 
-  - label: "🔗 API"
-    branch: "^(api)/.*$"
+  - label: '🔗 API'
+    branch: '^(api)/.*$'
 
-  - label: "🔧 Fix"
-    branch: "^(fix|hotfix)/.*$"
+  - label: '🔧 Fix'
+    branch: '^(fix|hotfix)/.*$'
 
-  - label: "🚀 Deploy"
-    branch: "^(deploy|release)/.*$"
+  - label: '🚀 Deploy'
+    branch: '^(deploy|release)/.*$'
 
   # 이슈 제목 기반
   - label: "⭐ Feature"
@@ -53,22 +53,22 @@ labels:
     title: "^\\[Deploy\\].*"
 
   # 작성자 기반
-  - label: "🐯 채원"
+  - label: '🐯 채원'
     authors:
-      - "chaewon41"
+      - 'chaewon41'
 
-  - label: "🐲 현종"
+  - label: '🐲 현종'
     authors:
-      - "Navi-Up"
+      - 'Navi-Up'
 
-  - label: "🐺 혜원"
+  - label: '🐺 혜원'
     authors:
-      - "ehye1"
+      - 'ehye1'
 
-  - label: "🐼 우찬"
+  - label: '🐼 우찬'
     authors:
-      - "pwc2002"
+      - 'pwc2002'
 
-  - label: "🦊 진석"
+  - label: '🦊 진석'
     authors:
-      - "jin-evergreen"
+      - 'jin-evergreen'

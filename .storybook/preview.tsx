@@ -1,8 +1,6 @@
 import type { Preview } from "@storybook/react-vite";
 
-// Tailwind CSS 파일 import 후 아래 주석 제거
-// 예시
-// import '../src/index.css';
+import "@shared/styles/index.css";
 
 const preview: Preview = {
   tags: ["autodocs"],

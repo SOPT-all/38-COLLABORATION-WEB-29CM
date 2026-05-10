@@ -2,7 +2,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { fileURLToPath, URL } from 'node:url';
-import svgr from "vite-plugin-svgr";
+import svgr from 'vite-plugin-svgr';
 
 // https://vite.dev/config/
 import path from 'node:path';

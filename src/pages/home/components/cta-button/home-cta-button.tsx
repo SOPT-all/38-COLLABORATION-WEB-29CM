@@ -2,7 +2,7 @@ import type { ButtonHTMLAttributes } from 'react';
 
 import { cn } from '@shared/utils/cn';
 
-interface HomeCtaButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
+type HomeCtaButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
 const HomeCtaButton = ({
   children,

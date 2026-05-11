@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_e629563f2759dd0"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.100.9",
@@ -35,6 +36,7 @@
     "@vitejs/plugin-react": "^6.0.1",
     "@vitest/browser-playwright": "^4.1.5",
     "@vitest/coverage-v8": "^4.1.5",
+    "chromatic": "^16.9.1",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react": "^7.37.5",
@@ -43,9 +45,9 @@
     "eslint-plugin-storybook": "^10.3.6",
     "globals": "^17.5.0",
     "playwright": "^1.59.1",
-    "storybook": "^10.3.6",
     "prettier": "3.8.3",
     "prettier-plugin-tailwindcss": "^0.8.0",
+    "storybook": "^10.3.6",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.2",
     "vite": "^8.0.10",

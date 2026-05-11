@@ -1,0 +1,74 @@
+version: 1
+
+labels:
+  # 브랜치 기반
+  - label: '⭐ Feature'
+    branch: '^(feat|feature)/.*$'
+
+  - label: '🎨 Style'
+    branch: '^(style)/.*$'
+
+  - label: '⚙️ Init'
+    branch: '^(init)/.*$'
+
+  - label: '🔄 Refactor'
+    branch: '^(refactor)/.*$'
+
+  - label: '🔗 API'
+    branch: '^(api)/.*$'
+
+  - label: '🔧 Fix'
+    branch: '^(fix|hotfix)/.*$'
+
+  - label: '🚀 Deploy'
+    branch: '^(deploy|release)/.*$'
+
+  # 이슈 제목 기반
+  - label: "⭐ Feature"
+    type: "issue"
+    title: "^\\[Feature\\].*"
+
+  - label: "🎨 Style"
+    type: "issue"
+    title: "^\\[Style\\].*"
+
+  - label: "⚙️ Init"
+    type: "issue"
+    title: "^\\[Init\\].*"
+
+  - label: "🔄 Refactor"
+    type: "issue"
+    title: "^\\[Refactor\\].*"
+
+  - label: "🔗 API"
+    type: "issue"
+    title: "^\\[API\\].*"
+
+  - label: "🔧 Fix"
+    type: "issue"
+    title: "^\\[Fix\\].*"
+
+  - label: "🚀 Deploy"
+    type: "issue"
+    title: "^\\[Deploy\\].*"
+
+  # 작성자 기반
+  - label: '🐯 채원'
+    authors:
+      - 'chaewon41'
+
+  - label: '🐲 현종'
+    authors:
+      - 'Navi-Up'
+
+  - label: '🐺 혜원'
+    authors:
+      - 'ehye1'
+
+  - label: '🐼 우찬'
+    authors:
+      - 'pwc2002'
+
+  - label: '🦊 진석'
+    authors:
+      - 'jin-evergreen'

@@ -7,6 +7,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
 import { defineConfig, globalIgnores } from 'eslint/config';
+import importPlugin from 'eslint-plugin-import';
 
 export default defineConfig([
   globalIgnores(['dist']),
@@ -21,12 +22,18 @@ export default defineConfig([
     languageOptions: {
       globals: globals.browser,
     },
+    plugins: {
+      import: importPlugin,
+    },
     settings: {
       'import/resolver': {
         typescript: {
           project: './tsconfig.json',
         },
       },
+    },
+    rules: {
+      'import/no-unresolved': 'error',
     },
   },
   ...storybook.configs['flat/recommended'],

@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    label: '버튼',
+    label: 'storybook 배포 확인',
   },
 };
 

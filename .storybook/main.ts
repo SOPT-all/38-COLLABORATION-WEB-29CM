@@ -1,6 +1,5 @@
 import svgr from 'vite-plugin-svgr';
 import { mergeConfig } from 'vite';
-import tsconfigPaths from 'vite-tsconfig-paths';
 import tailwindcss from '@tailwindcss/vite';
 import type { StorybookConfig } from '@storybook/react-vite';
 
@@ -16,7 +15,7 @@ const config: StorybookConfig = {
   framework: '@storybook/react-vite',
   async viteFinal(config) {
     return mergeConfig(config, {
-      plugins: [tsconfigPaths(), tailwindcss(), svgr()],
+      plugins: [tailwindcss(), svgr()],
     });
   },
 };

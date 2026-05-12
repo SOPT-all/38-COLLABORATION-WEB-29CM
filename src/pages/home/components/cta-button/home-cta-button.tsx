@@ -15,7 +15,7 @@ const HomeCtaButton = ({
       type={type}
       className={cn(
         'flex h-15 w-full cursor-pointer items-center justify-center border border-white bg-black text-[18px] leading-[1.4] font-normal text-white disabled:cursor-not-allowed',
-        'hover:bg-gray-700 hover:text-white',
+        'transition-colors duration-150 hover:bg-gray-700',
         className,
       )}
       {...props}

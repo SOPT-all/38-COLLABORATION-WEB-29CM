@@ -1,4 +1,4 @@
-import ChevronIcon from '@shared/icons/assets/icn-chevron-right-small.svg?react';
+import { ChevronRightSmallIcon } from '@shared/icons';
 import { cva } from 'class-variance-authority';
 
 const chipVariants = cva(
@@ -26,7 +26,7 @@ const Chip = ({ label, icon, variant }: ChipProps) => {
   return (
     <button type="button" className={chipVariants({ variant })}>
       <span>{label}</span>
-      {icon && <ChevronIcon />}
+      {icon && <ChevronRightSmallIcon />}
     </button>
   );
 };

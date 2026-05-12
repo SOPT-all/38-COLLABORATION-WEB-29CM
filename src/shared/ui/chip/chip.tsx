@@ -6,7 +6,7 @@ const chipVariants = cva(
   {
     variants: {
       variant: {
-        chip: 'justify-center bg-gray-200 px-2 py-px text-caption-02-semibold text-gray-800',
+        chip: 'justify-center bg-gray-200 px-1 py-px text-caption-02-semibold text-gray-800',
         cta: 'justify-between bg-black px-3 h-6 text-body-01 text-white gap-2.5',
       },
     },

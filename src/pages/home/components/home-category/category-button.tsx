@@ -19,6 +19,7 @@ const CategoryButton = ({
       className={cn(
         'relative aspect-2/1 w-full cursor-pointer overflow-hidden',
         'before:pointer-events-none before:absolute before:inset-0 before:bg-black before:opacity-30 before:content-[""]',
+        'hover:before:opacity-80',
         className,
       )}
       {...props}

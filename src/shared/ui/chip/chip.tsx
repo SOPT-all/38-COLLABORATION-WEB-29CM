@@ -26,7 +26,7 @@ const Chip = ({ label, icon, variant }: ChipProps) => {
   return (
     <button type="button" className={chipVariants({ variant })}>
       <span>{label}</span>
-      {icon && <ChevronRightSmallIcon />}
+      {icon && <ChevronRightSmallIcon aria-hidden="true" />}
     </button>
   );
 };

@@ -16,6 +16,7 @@ type Story = StoryObj<typeof ShowcaseTitle>;
 
 export const Default: Story = {
   args: {
+    theme: 'LIFESTYLE',
     title: '당신의 취향에 맞춘 잡화 셀렉션',
   },
 };

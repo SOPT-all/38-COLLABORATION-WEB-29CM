@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import ShowcaseTitle from './showcase-title';
+import ShowcaseTitle from './showcase-section-title';
 
 const meta: Meta<typeof ShowcaseTitle> = {
   title: 'Showcase/ShowcaseTitle',

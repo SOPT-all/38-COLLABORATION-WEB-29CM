@@ -11,3 +11,4 @@ export { default as ShoppingbagIcon } from './assets/icn-shoppingbag.svg?react';
 export { default as StopIcon } from './assets/icn-stop.svg?react';
 export { default as TopBottomIcon } from './assets/icn-top-bottom.svg?react';
 export { default as UsercircleIcon } from './assets/icn-usercircle.svg?react';
+export { default as Logo29cmIcon } from './assets/icn-logo.svg?react';

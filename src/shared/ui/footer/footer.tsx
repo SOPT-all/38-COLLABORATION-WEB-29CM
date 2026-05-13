@@ -1,7 +1,7 @@
 import ContactSection from './footer-contact-section';
 import NoticeSection from './footer-notice-section';
 import CompanyInfoSection from './footer-companyinfo-section';
-import type { Notice } from './footer-types';
+import type { Notice } from './types';
 
 interface FooterProps {
   notices: Notice[];

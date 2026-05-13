@@ -1,5 +1,5 @@
-import { FOOTER_ITEMS } from './footer.constants';
-import type { Notice } from './footer-types';
+import { FOOTER_ITEMS } from './constants';
+import type { Notice } from './types';
 
 interface NoticeSectionProps {
   notices: Notice[];

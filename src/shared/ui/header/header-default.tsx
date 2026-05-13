@@ -5,7 +5,7 @@ export default function HeaderDefault() {
   return (
     <div className="flex items-start justify-between px-9">
       {/* left */}
-      <div className="flex flex-1 flex-col items-start gap-8 pt-[34px] pb-2.5">
+      <div className="flex flex-1 flex-col items-start gap-8 pb-2.5">
         <Logo29cmIcon className="h-[26px] w-[103px]" />
 
         <nav className="flex items-center gap-2.5 px-0.5">
@@ -38,7 +38,7 @@ export default function HeaderDefault() {
       </div>
 
       {/* right */}
-      <div className="flex flex-col items-end gap-4 pt-[34px]">
+      <div className="flex flex-col items-end gap-4">
         <div className="mx-0.5 flex items-center gap-3.5">
           {ACTION_ITEMS.map(({ label, icon: Icon }) => (
             <button

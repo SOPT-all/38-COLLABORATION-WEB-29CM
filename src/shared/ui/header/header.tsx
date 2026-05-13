@@ -33,7 +33,10 @@ export default function Header({
 
   return (
     <header
-      className={cn('fixed top-0 right-0 left-0 z-50 bg-white', className)}
+      className={cn(
+        'fixed top-0 right-0 left-0 z-50 bg-white pt-[34px]',
+        className,
+      )}
       {...props}
     >
       {variant === 'scroll-aware' && scrolled ? (

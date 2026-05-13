@@ -5,7 +5,7 @@ export default function HeaderCompact() {
   return (
     <div className="flex w-full items-start justify-between px-9 pb-2.5">
       {/* left */}
-      <div className="flex items-center gap-6 pt-[34px]">
+      <div className="flex items-center gap-6">
         <Logo29cmIcon className="h-[18px] w-[73px]" />
 
         <nav className="flex items-center gap-[18px]">
@@ -22,7 +22,7 @@ export default function HeaderCompact() {
       </div>
 
       {/* right */}
-      <div className="flex items-center gap-2 pt-[34px]">
+      <div className="flex items-center gap-2">
         {ACTION_ITEMS.map(({ label, icon: Icon }) => (
           <button key={label} aria-label={label}>
             <Icon className="h-5 w-5" />

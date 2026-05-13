@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import type { HTMLAttributes } from 'react';
 
 import HeaderDefault from './header-default';
-import HeaderCompact from './header-compact';
+import HeaderScrolled from './header-scrolled';
 
 import { cn } from '@shared/utils/cn';
 
@@ -36,7 +36,11 @@ export default function Header({
       className={cn('fixed inset-x-0 top-0 z-50 bg-white pt-[34px]', className)}
       {...props}
     >
-      {variant === 'scroll' && scrolled ? <HeaderCompact /> : <HeaderDefault />}
+      {variant === 'scroll' && scrolled ? (
+        <HeaderScrolled />
+      ) : (
+        <HeaderDefault />
+      )}
     </header>
   );
 }

@@ -1,7 +1,7 @@
 import { SearchIcon, Logo29cmIcon } from '@shared/icons';
 import { NAV_ITEMS, ACTION_ITEMS } from './constants';
 
-export default function HeaderCompact() {
+export default function HeaderScrolled() {
   return (
     <div className="flex w-full items-start justify-between px-9 pb-2.5">
       {/* left */}

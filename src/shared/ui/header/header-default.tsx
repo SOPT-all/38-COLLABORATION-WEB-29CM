@@ -44,7 +44,7 @@ export default function HeaderDefault() {
             <button
               key={label}
               aria-label={ariaLabel}
-              className="caption-02-regular flex items-center gap-0.5 text-black"
+              className="text-caption-02-regular flex items-center gap-0.5 text-black"
             >
               <Icon className="h-[14px] w-[14px]" />
               {label}

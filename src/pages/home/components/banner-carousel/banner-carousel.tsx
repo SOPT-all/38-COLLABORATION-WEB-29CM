@@ -3,17 +3,17 @@ import { useEffect, useState } from 'react';
 import { ChevronRightIcon } from '@shared/icons';
 import { cn } from '@shared/utils/cn';
 
-type CarouselImage = {
+interface CarouselImage {
   carouselId: number;
   imageUrl: string;
   altText: string;
-};
+}
 
-type BannerCarouselProps = {
+interface BannerCarouselProps {
   images: CarouselImage[];
   interval?: number;
   className?: string;
-};
+}
 
 const BannerCarousel = ({
   images,

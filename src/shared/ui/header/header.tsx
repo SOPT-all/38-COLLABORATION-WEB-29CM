@@ -4,6 +4,8 @@ import type { HTMLAttributes } from 'react';
 import HeaderDefault from './header-default';
 import HeaderCompact from './header-compact';
 
+import { cn } from '@shared/utils/cn';
+
 type HeaderVariant = 'fixed-default' | 'scroll-aware';
 
 interface HeaderProps extends HTMLAttributes<HTMLElement> {
@@ -37,7 +39,7 @@ export default function Header({
 
   return (
     <header
-      className={className ?? 'fixed top-0 right-0 left-0 z-50 bg-white'}
+      className={cn('fixed top-0 right-0 left-0 z-50 bg-white', className)}
       {...props}
     >
       {isCompact ? <HeaderCompact /> : <HeaderDefault />}

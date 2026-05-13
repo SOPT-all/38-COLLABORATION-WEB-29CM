@@ -22,7 +22,7 @@ export default function HeaderDefault() {
           </div>
 
           <div className="flex items-center gap-[15px]">
-            <span className="h-4 w-0.5 bg-gray-500" />
+            <span aria-hidden="true" className="h-4 w-0.5 bg-gray-500" />
 
             {SUB_NAV_ITEMS.map((item) => (
               <a

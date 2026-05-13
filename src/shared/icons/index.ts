@@ -11,3 +11,8 @@ export { default as ShoppingbagIcon } from './assets/icn-shoppingbag.svg?react';
 export { default as StopIcon } from './assets/icn-stop.svg?react';
 export { default as TopBottomIcon } from './assets/icn-top-bottom.svg?react';
 export { default as UsercircleIcon } from './assets/icn-usercircle.svg?react';
+export { default as InstagramIcon } from './assets/icn-footer-instagram.svg?react';
+export { default as YoutubeIcon } from './assets/icn-footer-youtube.svg?react';
+export { default as AppleIcon } from './assets/icn-footer-apple.svg?react';
+export { default as GooglePlayIcon } from './assets/icn-footer-googleplay.svg?react';
+export { default as BarIcon } from './assets/icn-bar.svg?react';

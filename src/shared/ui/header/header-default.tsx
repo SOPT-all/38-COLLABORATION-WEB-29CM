@@ -14,7 +14,7 @@ export default function HeaderDefault() {
               <a
                 key={item}
                 href="#"
-                className="text-heading-01 text-black hover:underline"
+                className="text-heading-01 border-b-4 border-transparent text-black hover:border-black"
               >
                 {item}
               </a>

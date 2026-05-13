@@ -13,7 +13,7 @@ export default function HeaderCompact() {
             <a
               key={item}
               href="#"
-              className="text-title-02 text-black hover:underline"
+              className="text-title-02 border-b-4 border-transparent text-black hover:border-black"
             >
               {item}
             </a>

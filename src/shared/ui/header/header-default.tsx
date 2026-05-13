@@ -52,7 +52,7 @@ export default function HeaderDefault() {
           ))}
         </div>
 
-        <button aria-label="검색" className="self-end">
+        <button aria-label="검색">
           <SearchIcon className="h-10 w-10" />
         </button>
       </div>

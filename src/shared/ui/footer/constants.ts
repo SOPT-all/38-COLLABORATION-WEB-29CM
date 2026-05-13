@@ -28,3 +28,11 @@ export const FOOTER_ITEMS = [
     ],
   },
 ] as const;
+
+export const POLICY_LINKS = [
+  '개인정보 처리 방침',
+  '이용약관',
+  '분쟁해결기준',
+  '안전거래센터',
+  '결제대행 위탁사',
+];

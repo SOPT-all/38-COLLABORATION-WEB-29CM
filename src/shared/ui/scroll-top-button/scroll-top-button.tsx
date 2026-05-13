@@ -22,6 +22,7 @@ const ScrollTopButton = ({
 
   return (
     <button
+      {...props}
       type={type}
       aria-label="페이지 최상단으로 이동"
       className={cn(
@@ -30,7 +31,6 @@ const ScrollTopButton = ({
         className,
       )}
       onClick={handleClick}
-      {...props}
     >
       <ChevronUpIcon aria-hidden="true" />
     </button>

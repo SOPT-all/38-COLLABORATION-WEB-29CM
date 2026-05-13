@@ -1,11 +1,7 @@
 import ContactSection from './footer-contact-section';
 import NoticeSection from './footer-notice-section';
 import CompanyInfoSection from './footer-companyinfo-section';
-
-interface Notice {
-  title: string;
-  displayOrder: number;
-}
+import type { Notice } from './footer-types';
 
 interface FooterProps {
   notices: Notice[];

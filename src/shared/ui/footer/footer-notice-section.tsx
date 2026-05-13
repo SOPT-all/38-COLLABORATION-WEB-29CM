@@ -1,8 +1,5 @@
 import { FOOTER_ITEMS } from './footer.constants';
-interface Notice {
-  title: string;
-  displayOrder: number;
-}
+import type { Notice } from './footer-types';
 
 interface NoticeSectionProps {
   notices: Notice[];

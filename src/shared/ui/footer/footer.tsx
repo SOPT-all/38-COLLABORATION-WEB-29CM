@@ -1,13 +1,9 @@
 import ContactSection from './footer-contact-section';
 import NoticeSection from './footer-notice-section';
 import CompanyInfoSection from './footer-companyinfo-section';
-import type { Notice } from './types';
+import type { NoticeSectionProps } from './types';
 
-interface FooterProps {
-  notices: Notice[];
-}
-
-const Footer = ({ notices }: FooterProps) => (
+const Footer = ({ notices }: NoticeSectionProps) => (
   <footer className="px-9">
     <ContactSection />
     <NoticeSection notices={notices} />

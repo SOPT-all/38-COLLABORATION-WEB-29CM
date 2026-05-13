@@ -1,9 +1,5 @@
 import { FOOTER_ITEMS } from './constants';
-import type { Notice } from './types';
-
-interface NoticeSectionProps {
-  notices: Notice[];
-}
+import type { NoticeSectionProps } from './types';
 
 const NoticeSection = ({ notices }: NoticeSectionProps) => (
   <div className="flex justify-between border-b border-gray-200 pt-2.5 pb-2.5">

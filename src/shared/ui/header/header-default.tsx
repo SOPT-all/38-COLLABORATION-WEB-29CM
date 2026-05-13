@@ -44,6 +44,7 @@ export default function HeaderDefault() {
             <button
               key={label}
               aria-label={ariaLabel}
+              type="button"
               className="text-caption-02-regular flex items-center gap-0.5 text-black"
             >
               <Icon className="h-[14px] w-[14px]" />
@@ -52,7 +53,7 @@ export default function HeaderDefault() {
           ))}
         </div>
 
-        <button aria-label="검색">
+        <button aria-label="검색" type="button">
           <SearchIcon className="h-10 w-10" />
         </button>
       </div>

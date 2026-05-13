@@ -24,12 +24,12 @@ export default function HeaderScrolled() {
       {/* right */}
       <div className="flex items-center gap-2">
         {ACTION_ITEMS.map(({ label, icon: Icon, ariaLabel }) => (
-          <button key={label} aria-label={ariaLabel}>
+          <button key={label} aria-label={ariaLabel} type="button">
             <Icon className="h-5 w-5" />
           </button>
         ))}
 
-        <button aria-label="검색">
+        <button aria-label="검색" type="button">
           <SearchIcon className="h-5 w-5" />
         </button>
       </div>

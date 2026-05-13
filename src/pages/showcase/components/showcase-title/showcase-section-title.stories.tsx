@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import ShowcaseTitle from './showcase-section-title';
+import ShowcaseSectionTitle from './showcase-section-title';
 
-const meta: Meta<typeof ShowcaseTitle> = {
-  title: 'Showcase/ShowcaseTitle',
-  component: ShowcaseTitle,
+const meta: Meta<typeof ShowcaseSectionTitle> = {
+  title: 'Showcase/ShowcaseSectionTitle',
+  component: ShowcaseSectionTitle,
   tags: ['autodocs'],
   argTypes: {
     title: { control: 'text' },
@@ -12,7 +12,7 @@ const meta: Meta<typeof ShowcaseTitle> = {
 
 export default meta;
 
-type Story = StoryObj<typeof ShowcaseTitle>;
+type Story = StoryObj<typeof ShowcaseSectionTitle>;
 
 export const Default: Story = {
   args: {

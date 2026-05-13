@@ -24,25 +24,23 @@ export default function Header({
   useEffect(() => {
     if (variant !== 'scroll-aware') return;
 
-    const handleScroll = () => {
-      setScrolled(window.scrollY > SCROLL_THRESHOLD);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > SCROLL_THRESHOLD);
 
     handleScroll();
-
     window.addEventListener('scroll', handleScroll, { passive: true });
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, [variant]);
-
-  const isCompact = variant === 'scroll-aware' && scrolled;
 
   return (
     <header
       className={cn('fixed top-0 right-0 left-0 z-50 bg-white', className)}
       {...props}
     >
-      {isCompact ? <HeaderCompact /> : <HeaderDefault />}
+      {variant === 'scroll-aware' && scrolled ? (
+        <HeaderCompact />
+      ) : (
+        <HeaderDefault />
+      )}
     </header>
   );
 }

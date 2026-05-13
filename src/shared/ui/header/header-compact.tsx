@@ -23,8 +23,8 @@ export default function HeaderCompact() {
 
       {/* right */}
       <div className="flex items-center gap-2">
-        {ACTION_ITEMS.map(({ label, icon: Icon }) => (
-          <button key={label} aria-label={label}>
+        {ACTION_ITEMS.map(({ label, icon: Icon, ariaLabel }) => (
+          <button key={label} aria-label={ariaLabel}>
             <Icon className="h-5 w-5" />
           </button>
         ))}

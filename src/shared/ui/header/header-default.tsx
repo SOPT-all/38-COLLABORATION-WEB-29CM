@@ -40,9 +40,10 @@ export default function HeaderDefault() {
       {/* right */}
       <div className="flex flex-col items-end gap-4">
         <div className="mx-0.5 flex items-center gap-3.5">
-          {ACTION_ITEMS.map(({ label, icon: Icon }) => (
+          {ACTION_ITEMS.map(({ label, icon: Icon, ariaLabel }) => (
             <button
               key={label}
+              aria-label={ariaLabel}
               className="caption-02-regular flex items-center gap-0.5 text-black"
             >
               <Icon className="h-[14px] w-[14px]" />

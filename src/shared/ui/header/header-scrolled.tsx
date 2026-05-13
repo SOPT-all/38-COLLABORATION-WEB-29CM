@@ -1,12 +1,18 @@
 import { SearchIcon, Logo29cmIcon } from '@shared/icons';
 import { NAV_ITEMS, ACTION_ITEMS } from './constants';
 
+import { Link } from 'react-router';
+
+import { ROUTE_PATH } from '@app/router/path';
+
 export default function HeaderScrolled() {
   return (
     <div className="flex w-full items-start justify-between px-9 pb-2.5">
       {/* left */}
       <div className="flex items-center gap-6">
-        <Logo29cmIcon className="h-[18px] w-[73px]" />
+        <Link to={ROUTE_PATH.HOME} aria-label="홈으로 이동">
+          <Logo29cmIcon className="h-[18px] w-[73px]" />
+        </Link>
 
         <nav className="flex items-center gap-[18px]">
           {NAV_ITEMS.map((item) => (

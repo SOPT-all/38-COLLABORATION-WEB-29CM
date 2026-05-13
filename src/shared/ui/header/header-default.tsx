@@ -1,4 +1,8 @@
+import { Link } from 'react-router';
+
+import { ROUTE_PATH } from '@app/router/path';
 import { SearchIcon, Logo29cmIcon } from '@shared/icons';
+
 import { NAV_ITEMS, SUB_NAV_ITEMS, ACTION_ITEMS } from './constants';
 
 export default function HeaderDefault() {
@@ -6,7 +10,9 @@ export default function HeaderDefault() {
     <div className="flex items-start justify-between px-9">
       {/* left */}
       <div className="flex flex-1 flex-col items-start gap-8 pb-2.5">
-        <Logo29cmIcon className="h-[26px] w-[103px]" />
+        <Link to={ROUTE_PATH.HOME} aria-label="홈으로 이동">
+          <Logo29cmIcon />
+        </Link>
 
         <nav className="flex items-center gap-2.5 px-0.5">
           <div className="flex items-start gap-6">

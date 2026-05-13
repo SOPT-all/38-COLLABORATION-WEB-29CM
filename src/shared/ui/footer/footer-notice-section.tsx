@@ -11,11 +11,13 @@ const NoticeSection = ({ notices }: NoticeSectionProps) => (
   <div className="flex justify-between border-b border-gray-200 pt-2.5 pb-10">
     <div className="px-2.5">
       <h3 className="text-caption-01 flex flex-col gap-2">NOTICE</h3>
-      <ul className="text-body-02-regular flex flex-col gap-2">
+      <ul className="text-body-02-regular flex flex-col">
         {notices
           .sort((a, b) => a.displayOrder - b.displayOrder)
           .map((notice) => (
-            <li key={notice.displayOrder}>{notice.title}</li>
+            <li key={notice.displayOrder} className="py-1">
+              {notice.title}
+            </li>
           ))}
       </ul>
     </div>

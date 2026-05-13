@@ -7,7 +7,7 @@ interface HomeMenuProps {
 const HomeMenu = ({ categories }: HomeMenuProps) => {
   return (
     <nav className="flex h-[42px] items-end gap-[10px] px-9 pb-[10px]">
-      {[...categories]
+      {categories
         .filter((category) => category.isActive)
         .sort((a, b) => a.displayOrder - b.displayOrder)
         .map((category) => (

@@ -30,7 +30,7 @@ export const ACTION_ITEMS = [
     icon: LoginIcon,
     ariaLabel: '로그인',
   },
-];
+] as const;
 
 export const NAV_ITEMS = [
   'Shopping',
@@ -38,6 +38,6 @@ export const NAV_ITEMS = [
   'Showcase',
   'PT',
   '29Magazine',
-];
+] as const;
 
-export const SUB_NAV_ITEMS = ['Event', 'Lookbook'];
+export const SUB_NAV_ITEMS = ['Event', 'Lookbook'] as const;

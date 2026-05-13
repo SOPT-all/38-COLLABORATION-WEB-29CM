@@ -13,7 +13,7 @@ export default function HeaderScrolled() {
             <a
               key={item}
               href="#"
-              className="text-title-02 border-b-4 border-transparent text-black hover:border-black"
+              className="text-title-02 border-b-4 border-transparent whitespace-nowrap text-black hover:border-black"
             >
               {item}
             </a>

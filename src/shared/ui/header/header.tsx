@@ -14,11 +14,7 @@ interface HeaderProps extends HTMLAttributes<HTMLElement> {
 
 const SCROLL_THRESHOLD = 50;
 
-export default function Header({
-  variant = 'default',
-  className,
-  ...props
-}: HeaderProps) {
+const Header = ({ variant = 'default', className, ...props }: HeaderProps) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -43,4 +39,6 @@ export default function Header({
       )}
     </header>
   );
-}
+};
+
+export default Header;

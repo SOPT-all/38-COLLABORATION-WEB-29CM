@@ -3,13 +3,21 @@ import { BarIcon } from '@shared/icons';
 const CompanyInfoSection = () => (
   <>
     <div className="text-body-02-bold flex pt-1">
-      <span className="flex items-center gap-2.5">
-        개인정보 처리 방침
-        <BarIcon aria-hidden="true" /> 이용약관
-        <BarIcon aria-hidden="true" /> 분쟁해결기준
-        <BarIcon aria-hidden="true" /> 안전거래센터
-        <BarIcon aria-hidden="true" /> 결제대행 위탁사
-      </span>
+      <div className="flex items-center gap-2.5">
+        <span>개인정보 처리 방침</span>
+        <span>
+          <BarIcon aria-hidden="true" /> 이용약관
+        </span>
+        <span>
+          <BarIcon aria-hidden="true" /> 분쟁해결기준
+        </span>
+        <span>
+          <BarIcon aria-hidden="true" /> 안전거래센터
+        </span>
+        <span>
+          <BarIcon aria-hidden="true" /> 결제대행 위탁사
+        </span>
+      </div>
     </div>
     <div className="text-footer-regular flex flex-col gap-[9px] text-gray-800">
       <div className="mt-[9px] flex items-center gap-1.5">

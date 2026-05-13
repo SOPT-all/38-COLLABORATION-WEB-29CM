@@ -12,13 +12,13 @@ type Story = StoryObj<typeof Header>;
 
 export const Default: Story = {
   args: {
-    variant: 'fixed-default',
+    variant: 'default',
   },
 };
 
 export const Scroll: Story = {
   args: {
-    variant: 'scroll-aware',
+    variant: 'scroll',
   },
   render: (args) => (
     <div className="h-[200vh] bg-white">

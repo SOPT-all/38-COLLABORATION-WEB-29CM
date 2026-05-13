@@ -6,7 +6,7 @@ import HeaderCompact from './header-compact';
 
 import { cn } from '@shared/utils/cn';
 
-type HeaderVariant = 'fixed-default' | 'scroll-aware';
+type HeaderVariant = 'default' | 'scroll';
 
 interface HeaderProps extends HTMLAttributes<HTMLElement> {
   variant?: HeaderVariant;
@@ -15,14 +15,14 @@ interface HeaderProps extends HTMLAttributes<HTMLElement> {
 const SCROLL_THRESHOLD = 50;
 
 export default function Header({
-  variant = 'fixed-default',
+  variant = 'default',
   className,
   ...props
 }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    if (variant !== 'scroll-aware') return;
+    if (variant !== 'scroll') return;
 
     const handleScroll = () => setScrolled(window.scrollY > SCROLL_THRESHOLD);
 
@@ -39,11 +39,7 @@ export default function Header({
       )}
       {...props}
     >
-      {variant === 'scroll-aware' && scrolled ? (
-        <HeaderCompact />
-      ) : (
-        <HeaderDefault />
-      )}
+      {variant === 'scroll' && scrolled ? <HeaderCompact /> : <HeaderDefault />}
     </header>
   );
 }

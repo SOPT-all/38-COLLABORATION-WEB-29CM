@@ -1,6 +1,6 @@
-import ContactSection from './footer-contact-section';
-import NoticeSection from './footer-notice-section';
-import CompanyInfoSection from './footer-companyinfo-section';
+import ContactSection from './contact-section';
+import NoticeSection from './notice-section';
+import CompanyInfoSection from './companyinfo-section';
 import type { NoticeSectionProps } from './types';
 
 const Footer = ({ notices }: NoticeSectionProps) => (

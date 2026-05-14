@@ -29,7 +29,7 @@ const Header = ({ variant = 'default', className, ...props }: HeaderProps) => {
 
   return (
     <header
-      className={cn('fixed inset-x-0 top-0 z-50 bg-white pt-[34px]', className)}
+      className={cn('sticky inset-x-0 top-0 z-50 bg-white pt-[34px]', className)}
       {...props}
     >
       {variant === 'scroll' && scrolled ? (

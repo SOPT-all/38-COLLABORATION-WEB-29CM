@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ShowcaseCard } from './showcase-card';
+import ShowcaseCard from './showcase-card';
 
 const meta: Meta<typeof ShowcaseCard> = {
   title: 'Showcase/ShowcaseCard',

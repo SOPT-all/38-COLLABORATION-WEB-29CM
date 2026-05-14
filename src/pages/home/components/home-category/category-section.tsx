@@ -12,7 +12,7 @@ interface CategorySectionProps {
 
 const CategorySection = ({ categories }: CategorySectionProps) => {
   return (
-    <section className="grid grid-cols-6 gap-4.5 px-9.5 py-18">
+    <section className="grid grid-cols-6 gap-x-4.5 gap-y-5 px-9.5 py-18">
       {categories.map((category) => (
         <CategoryButton
           key={category.categoryId}

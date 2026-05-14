@@ -1,11 +1,11 @@
-import {
-  UsercircleIcon,
-  HeartFilledIcon,
-  ShoppingbagIcon,
-  LoginIcon,
-} from '@shared/icons';
-
 import { ROUTE_PATH } from '@app/router/path';
+
+import {
+  HeartFilledIcon,
+  LoginIcon,
+  ShoppingbagIcon,
+  UsercircleIcon,
+} from '@shared/icons';
 
 export interface NavItem {
   label: string;

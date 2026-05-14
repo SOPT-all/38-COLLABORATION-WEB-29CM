@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import type { HTMLAttributes } from 'react';
 
+import { cn } from '@shared/utils/cn';
+
 import HeaderDefault from './header-default';
 import HeaderScrolled from './header-scrolled';
-
-import { cn } from '@shared/utils/cn';
 
 type HeaderVariant = 'default' | 'scroll';
 

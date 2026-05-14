@@ -1,9 +1,10 @@
 import { Link } from 'react-router';
 
 import { ROUTE_PATH } from '@app/router/path';
-import { SearchIcon, Logo29cmIcon } from '@shared/icons';
 
-import { NAV_ITEMS, SUB_NAV_ITEMS, ACTION_ITEMS } from './constants';
+import { Logo29cmIcon, SearchIcon } from '@shared/icons';
+
+import { ACTION_ITEMS, NAV_ITEMS, SUB_NAV_ITEMS } from './constants';
 
 const HeaderDefault = () => {
   return (

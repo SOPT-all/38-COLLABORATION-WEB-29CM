@@ -1,9 +1,10 @@
-import { SearchIcon, Logo29cmIcon } from '@shared/icons';
-import { NAV_ITEMS, ACTION_ITEMS } from './constants';
-
 import { Link } from 'react-router';
 
 import { ROUTE_PATH } from '@app/router/path';
+
+import { Logo29cmIcon, SearchIcon } from '@shared/icons';
+
+import { ACTION_ITEMS, NAV_ITEMS } from './constants';
 
 const HeaderScrolled = () => {
   return (

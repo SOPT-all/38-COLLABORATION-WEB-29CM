@@ -45,7 +45,7 @@ const HeaderDefault = () => {
 
       {/* right */}
       <div className="flex flex-col items-end gap-4">
-        <div className="mx-0.5 flex items-center gap-3.5">
+        <div className="flex items-center gap-3.5 px-0.5">
           {ACTION_ITEMS.map(({ label, icon: Icon, ariaLabel }) => (
             <button
               key={label}

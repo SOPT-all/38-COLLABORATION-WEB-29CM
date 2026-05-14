@@ -32,7 +32,7 @@ export const ProductListItem = ({
   return (
     <div className="flex gap-3">
       <Image src={imageUrl} alt={name} className="h-16 w-16 rounded-sm" />
-      <div className="flex max-w-[222px] flex-col gap-0.5">
+      <div className="flex w-full max-w-[222px] flex-col gap-0.5">
         <span className="text-caption-02-semibold">{brandName}</span>
         <p className="text-body-02-regular line-clamp-1">{name}</p>
         <div className="text-body-02-bold mb-0.5 flex gap-1">

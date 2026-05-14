@@ -3,7 +3,7 @@ import Chip from '@shared/ui/chip/chip';
 import Image from '@shared/ui/image';
 import { formatCompactCount } from '@shared/utils/format-count';
 
-interface ProductListItemProps {
+export interface ProductListItemProps {
   productId: number;
   imageUrl: string;
   brandName: string;
@@ -16,7 +16,7 @@ interface ProductListItemProps {
   onToggleLike?: () => void;
 }
 
-const ProductListItem = ({
+export const ProductListItem = ({
   imageUrl,
   brandName,
   name,

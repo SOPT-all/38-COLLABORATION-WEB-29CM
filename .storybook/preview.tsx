@@ -1,9 +1,17 @@
 import type { Preview } from '@storybook/react-vite';
 
 import '@shared/styles/index.css';
+import { MemoryRouter } from 'react-router';
 
 const preview: Preview = {
   tags: ['autodocs'],
+  decorators: [
+    (Story) => (
+      <MemoryRouter>
+        <Story />
+      </MemoryRouter>
+    ),
+  ],
   parameters: {
     controls: {
       matchers: {

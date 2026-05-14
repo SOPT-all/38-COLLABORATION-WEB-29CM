@@ -1,4 +1,5 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,300&display=swap');
 @import 'tailwindcss';
 
 @theme {
@@ -98,4 +99,12 @@
     #71717100 0%,
     var(--color-gray-800) 100%
   );
+}
+
+@utility text-subtitle-03-prompt {
+  font-family: 'Prompt', sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.4;
 }

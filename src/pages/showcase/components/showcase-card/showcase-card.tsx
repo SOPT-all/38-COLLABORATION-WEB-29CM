@@ -10,10 +10,7 @@ interface ShowcaseCardProps {
   endDate: string;
 }
 
-const convertDateRange = (startDate: string, endDate: string) => {
-  const convertDateFormat = (d: string) => d.replace(/-/g, '.');
-  return `${convertDateFormat(startDate)} ~ ${convertDateFormat(endDate).slice(5)}`;
-};
+const formatDate = (date: string) => date.replace(/-/g, '.');
 
 const ShowcaseCard = ({
   variant,
@@ -34,6 +31,7 @@ const ShowcaseCard = ({
       alt={title}
       className={cn('w-full', variant === 'big' ? 'h-[362px]' : 'h-[240px]')}
     />
+
     <div
       className={cn(
         'flex w-full flex-col pb-[50px]',
@@ -53,9 +51,11 @@ const ShowcaseCard = ({
         <p className="text-body-01 line-clamp-2 text-black">{description}</p>
       </div>
 
-      <time className="text-caption-01">
-        {convertDateRange(startDate, endDate)}
-      </time>
+      <div className="text-caption-01">
+        <time dateTime={startDate}>{formatDate(startDate)}</time>
+        {' ~ '}
+        <time dateTime={endDate}>{formatDate(endDate).slice(5)}</time>
+      </div>
     </div>
   </div>
 );

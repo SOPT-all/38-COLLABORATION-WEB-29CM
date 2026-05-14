@@ -54,13 +54,13 @@ const ProductListItem = ({
         className="flex cursor-pointer flex-col items-center justify-center"
       >
         <HeartIcon className="h-5 w-5 text-gray-700" />
-        <p className="text-body-02-regular text-gray-700">
-          {new Intl.NumberFormat('en', {
-            notation: 'compact',
-            maximumFractionDigits: 0,
-          }).format(likeCount)}
-        </p>
       </button>
+      <span className="text-body-02-regular text-gray-700">
+        {new Intl.NumberFormat('en', {
+          notation: 'compact',
+          maximumFractionDigits: 0,
+        }).format(likeCount)}
+      </span>
     </div>
   );
 };

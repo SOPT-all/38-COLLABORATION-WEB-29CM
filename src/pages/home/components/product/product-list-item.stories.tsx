@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import ProductListItem from './product-list-item';
 
 const meta = {
-  title: 'Home/product-list-item',
+  title: 'Home/product/product-list-item',
   component: ProductListItem,
   args: {
     productId: 0,

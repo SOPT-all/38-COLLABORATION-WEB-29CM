@@ -1,6 +1,7 @@
 import { HeartBlankedIcon, HeartFilledIcon } from '@shared/icons';
 import Chip from '@shared/ui/chip/chip';
 import Image from '@shared/ui/image';
+import { formatCompactCount } from '@shared/utils/format-count';
 
 interface ProductListItemProps {
   productId: number;
@@ -59,10 +60,7 @@ const ProductListItem = ({
           />
         </button>
         <span className="text-body-02-regular text-gray-700">
-          {new Intl.NumberFormat('en', {
-            notation: 'compact',
-            maximumFractionDigits: 0,
-          }).format(likeCount)}
+          {formatCompactCount(likeCount)}
         </span>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import Chip from '../chip/chip';
+import Chip from '@shared/ui/chip/chip';
 import {
   InstagramIcon,
   YoutubeIcon,

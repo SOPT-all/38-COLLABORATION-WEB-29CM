@@ -29,12 +29,12 @@ const CompanyInfoSection = () => (
           사업자정보확인
         </div>
       </div>
-      <span className="flex gap-2">
+      <div className="flex gap-2">
         <p>전화번호: 1660-2929</p>
         <p>이메일: customer@29cm.co.kr</p>
         <p>대표: 조만호, 조남성</p>
         <p>호스팅서비스: (주)무신사</p>
-      </span>
+      </div>
       <span>
         일부 상품의 경우 29CM는 통신판매의 당사자가 아닌 통신판매중개자로서
         상품, 상품정보, 거래에 대한 책임이 제한될 수 있으므로, 각 상품

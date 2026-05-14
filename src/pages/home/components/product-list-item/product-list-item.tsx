@@ -36,7 +36,7 @@ const ProductListItem = ({
         <span className="text-caption-02-semibold">{brandName}</span>
         <p className="text-body-02-regular line-clamp-1">{name}</p>
         <div className="text-body-02-bold mb-0.5 flex gap-1">
-          <span className="text-red">{saleRate}%</span>
+          {saleRate > 0 && <span className="text-red">{saleRate}%</span>}
           <span>{price.toLocaleString('ko-KR')}</span>
         </div>
         <div className="flex gap-[5px] overflow-hidden">

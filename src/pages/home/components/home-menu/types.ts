@@ -1,6 +1,4 @@
 export interface Category {
-  categoryId: number;
+  topCategoryId: number;
   name: string;
-  displayOrder: number;
-  isActive: boolean;
 }

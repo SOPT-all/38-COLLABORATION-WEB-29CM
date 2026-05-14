@@ -8,11 +8,9 @@ const HomeMenu = ({ categories }: HomeMenuProps) => {
   return (
     <nav className="flex h-[42px] items-end gap-[10px] px-9 pb-[10px]">
       {categories
-        .filter((category) => category.isActive)
-        .sort((a, b) => a.displayOrder - b.displayOrder)
         .map((category) => (
           <button
-            key={category.categoryId}
+            key={category.topCategoryId}
             type="button"
             className="group flex flex-col items-center"
           >

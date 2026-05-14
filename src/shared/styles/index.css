@@ -1,92 +1,110 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,300&display=swap');
 @import 'tailwindcss';
 
 @theme {
-    --font-sans: 'Pretendard Variable', Pretendard, system-ui, sans-serif;
+  --font-sans: 'Pretendard Variable', Pretendard, system-ui, sans-serif;
 
-    --color-gray-200: #f2f2f2;
-    --color-gray-500: #d9d9d9;
-    --color-gray-700: #b9b9b9;
-    --color-gray-800: #717171;
-    --color-gray-900: #141414;
+  --color-gray-200: #f2f2f2;
+  --color-gray-500: #d9d9d9;
+  --color-gray-700: #b9b9b9;
+  --color-gray-800: #717171;
+  --color-gray-900: #141414;
 
-    --color-white-opacity-10: #ffffff1a;
-    --color-black-opacity-10: #0000001a;
+  --color-white-opacity-10: #ffffff1a;
+  --color-black-opacity-10: #0000001a;
 
-    --color-red: #ff2c00;
-    --color-blue: #2a60ff;
+  --color-red: #ff2c00;
+  --color-blue: #2a60ff;
 
-    --text-heading-01: 32px;
-    --text-heading-01--line-height: 1.4;
-    --text-heading-01--letter-spacing: 0em;
-    --text-heading-01--font-weight: 700;
+  --text-heading-01: 32px;
+  --text-heading-01--line-height: 1.4;
+  --text-heading-01--letter-spacing: 0em;
+  --text-heading-01--font-weight: 700;
 
-    --text-heading-02: 20px;
-    --text-heading-02--line-height: 1.4;
-    --text-heading-02--letter-spacing: -0.02em;
-    --text-heading-02--font-weight: 700;
+  --text-heading-02: 20px;
+  --text-heading-02--line-height: 1.4;
+  --text-heading-02--letter-spacing: -0.02em;
+  --text-heading-02--font-weight: 700;
 
-    --text-title-01: 42px;
-    --text-title-01--line-height: 1.4;
-    --text-title-01--letter-spacing: 0.02em;
-    --text-title-01--font-weight: 400;
+  --text-title-01: 42px;
+  --text-title-01--line-height: 1.4;
+  --text-title-01--letter-spacing: 0.02em;
+  --text-title-01--font-weight: 400;
 
-    --text-title-02: 26px;
-    --text-title-02--line-height: 1.4;
-    --text-title-02--letter-spacing: 0.04em;
-    --text-title-02--font-weight: 700;
+  --text-title-02: 26px;
+  --text-title-02--line-height: 1.4;
+  --text-title-02--letter-spacing: 0.04em;
+  --text-title-02--font-weight: 700;
 
-    --text-title-03: 18px;
-    --text-title-03--line-height: 1.4;
-    --text-title-03--letter-spacing: -0.02em;
-    --text-title-03--font-weight: 700;
+  --text-title-03: 18px;
+  --text-title-03--line-height: 1.4;
+  --text-title-03--letter-spacing: -0.02em;
+  --text-title-03--font-weight: 700;
 
-    --text-subtitle-01: 14px;
-    --text-subtitle-01--line-height: 1.4;
-    --text-subtitle-01--letter-spacing: 0.04em;
-    --text-subtitle-01--font-weight: 700;
+  --text-subtitle-01: 14px;
+  --text-subtitle-01--line-height: 1.4;
+  --text-subtitle-01--letter-spacing: 0.04em;
+  --text-subtitle-01--font-weight: 700;
 
-    --text-subtitle-02: 12px;
-    --text-subtitle-02--line-height: 1.4;
-    --text-subtitle-02--letter-spacing: 0em;
-    --text-subtitle-02--font-weight: 700;
+  --text-subtitle-02: 12px;
+  --text-subtitle-02--line-height: 1.4;
+  --text-subtitle-02--letter-spacing: 0em;
+  --text-subtitle-02--font-weight: 700;
 
-    --text-body-01: 12px;
-    --text-body-01--line-height: 1.5;
-    --text-body-01--letter-spacing: 0em;
-    --text-body-01--font-weight: 400;
+  --text-body-01: 12px;
+  --text-body-01--line-height: 1.5;
+  --text-body-01--letter-spacing: 0em;
+  --text-body-01--font-weight: 400;
 
-    --text-body-02-bold: 10px;
-    --text-body-02-bold--line-height: 1.4;
-    --text-body-02-bold--letter-spacing: -0.02em;
-    --text-body-02-bold--font-weight: 700;
+  --text-body-02-bold: 10px;
+  --text-body-02-bold--line-height: 1.4;
+  --text-body-02-bold--letter-spacing: -0.02em;
+  --text-body-02-bold--font-weight: 700;
 
-    --text-body-02-regular: 10px;
-    --text-body-02-regular--line-height: 1.4;
-    --text-body-02-regular--letter-spacing: -0.02em;
-    --text-body-02-regular--font-weight: 400;
+  --text-body-02-regular: 10px;
+  --text-body-02-regular--line-height: 1.4;
+  --text-body-02-regular--letter-spacing: -0.02em;
+  --text-body-02-regular--font-weight: 400;
 
-    --text-caption-01: 12px;
-    --text-caption-01--line-height: 1.4;
-    --text-caption-01--letter-spacing: 0em;
-    --text-caption-01--font-weight: 600;
+  --text-caption-01: 12px;
+  --text-caption-01--line-height: 1.4;
+  --text-caption-01--letter-spacing: 0em;
+  --text-caption-01--font-weight: 600;
 
-    --text-caption-02-bold: 8px;
-    --text-caption-02-bold--line-height: 1.4;
-    --text-caption-02-bold--letter-spacing: 0em;
-    --text-caption-02-bold--font-weight: 700;
+  --text-caption-02-bold: 8px;
+  --text-caption-02-bold--line-height: 1.4;
+  --text-caption-02-bold--letter-spacing: 0em;
+  --text-caption-02-bold--font-weight: 700;
 
-    --text-caption-02-semibold: 8px;
-    --text-caption-02-semibold--line-height: 1.4;
-    --text-caption-02-semibold--letter-spacing: 0em;
-    --text-caption-02-semibold--font-weight: 600;
+  --text-caption-02-semibold: 8px;
+  --text-caption-02-semibold--line-height: 1.4;
+  --text-caption-02-semibold--letter-spacing: 0em;
+  --text-caption-02-semibold--font-weight: 600;
 
-    --text-caption-02-regular: 8px;
-    --text-caption-02-regular--line-height: 1.4;
-    --text-caption-02-regular--letter-spacing: 0em;
-    --text-caption-02-regular--font-weight: 400;
+  --text-caption-02-regular: 8px;
+  --text-caption-02-regular--line-height: 1.4;
+  --text-caption-02-regular--letter-spacing: 0em;
+  --text-caption-02-regular--font-weight: 400;
+
+  --text-footer-regular: 8px;
+  --text-footer-regular--line-height: 1.4;
+  --text-footer-regular--letter-spacing: 0em;
+  --text-footer-regular--font-weight: 400;
 }
 
 @utility bg-gray-linear-800 {
-    background-image: linear-gradient(to bottom, #71717100 0%, var(--color-gray-800) 100%);
+  background-image: linear-gradient(
+    to bottom,
+    #71717100 0%,
+    var(--color-gray-800) 100%
+  );
+}
+
+@utility text-subtitle-03-prompt {
+  font-family: 'Prompt', sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.4;
 }

@@ -5,6 +5,13 @@ import {
   LoginIcon,
 } from '@shared/icons';
 
+import { ROUTE_PATH } from '@app/router/path';
+
+export interface NavItem {
+  label: string;
+  to?: string;
+}
+
 export const ACTION_ITEMS = [
   {
     type: 'mypage',
@@ -32,12 +39,15 @@ export const ACTION_ITEMS = [
   },
 ] as const;
 
-export const NAV_ITEMS = [
-  'Shopping',
-  'Special-Order',
-  'Showcase',
-  'PT',
-  '29Magazine',
-] as const;
+export const NAV_ITEMS: NavItem[] = [
+  { label: 'Shopping' },
+  { label: 'Special-Order' },
+  { label: 'Showcase', to: ROUTE_PATH.SHOWCASE },
+  { label: 'PT' },
+  { label: '29Magazine' },
+];
 
-export const SUB_NAV_ITEMS = ['Event', 'Lookbook'] as const;
+export const SUB_NAV_ITEMS: NavItem[] = [
+  { label: 'Event' },
+  { label: 'Lookbook' },
+];

@@ -15,14 +15,14 @@ const HeaderScrolled = () => {
         </Link>
 
         <nav className="flex items-center gap-[18px]">
-          {NAV_ITEMS.map((item) => (
-            <a
-              key={item}
-              href="#"
+          {NAV_ITEMS.map(({ label, to }) => (
+            <Link
+              key={label}
+              to={to ?? '#'}
               className="text-title-02 border-b-4 border-transparent whitespace-nowrap text-black hover:border-black"
             >
-              {item}
-            </a>
+              {label}
+            </Link>
           ))}
         </nav>
       </div>

@@ -16,28 +16,28 @@ const HeaderDefault = () => {
 
         <nav className="flex items-center gap-2.5 px-0.5">
           <div className="flex items-start gap-6">
-            {NAV_ITEMS.map((item) => (
-              <a
-                key={item}
-                href="#"
+            {NAV_ITEMS.map(({ label, to }) => (
+              <Link
+                key={label}
+                to={to ?? '#'}
                 className="text-heading-01 border-b-4 border-transparent whitespace-nowrap text-black hover:border-black"
               >
-                {item}
-              </a>
+                {label}
+              </Link>
             ))}
           </div>
 
           <div className="flex items-center gap-[15px]">
             <span aria-hidden="true" className="h-4 w-0.5 bg-gray-500" />
 
-            {SUB_NAV_ITEMS.map((item) => (
-              <a
-                key={item}
-                href="#"
+            {SUB_NAV_ITEMS.map(({ label, to }) => (
+              <Link
+                key={label}
+                to={to ?? '#'}
                 className="text-subtitle-02 hover:underline"
               >
-                {item}
-              </a>
+                {label}
+              </Link>
             ))}
           </div>
         </nav>

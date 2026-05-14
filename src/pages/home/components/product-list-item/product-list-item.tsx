@@ -12,6 +12,7 @@ interface ProductListItemProps {
   tags: string[];
   likeCount: number;
   isLiked: boolean;
+  onToggleLike: () => void;
 }
 
 const ProductListItem = ({
@@ -23,6 +24,7 @@ const ProductListItem = ({
   tags,
   likeCount,
   isLiked,
+  onToggleLike,
 }: ProductListItemProps) => {
   const HeartIcon = isLiked ? HeartFilledIcon : HeartBlankedIcon;
 
@@ -46,6 +48,7 @@ const ProductListItem = ({
       </div>
       <button
         type="button"
+        onClick={onToggleLike}
         aria-label={isLiked ? '좋아요 취소' : '좋아요'}
         aria-pressed={isLiked}
         className="flex cursor-pointer flex-col items-center justify-center"

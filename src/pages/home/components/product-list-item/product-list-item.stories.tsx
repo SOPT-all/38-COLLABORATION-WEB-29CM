@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import HomeProductList from './home-product-list';
+import ProductListItem from './product-list-item';
 
 const meta = {
-  title: 'Home/home-product/home-product-list',
-  component: HomeProductList,
+  title: 'Home/product-list-item',
+  component: ProductListItem,
   args: {
     productId: 0,
     imageUrl: 'https://picsum.photos/200',
@@ -16,7 +16,7 @@ const meta = {
     likeCount: 35000,
     isLiked: false,
   },
-} satisfies Meta<typeof HomeProductList>;
+} satisfies Meta<typeof ProductListItem>;
 
 export default meta;
 

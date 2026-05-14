@@ -2,7 +2,7 @@ import { HeartBlankedIcon, HeartFilledIcon } from '@shared/icons';
 import Chip from '@shared/ui/chip/chip';
 import Image from '@shared/ui/image';
 
-interface HomeProductListProps {
+interface ProductListItemProps {
   productId: number;
   imageUrl: string;
   brandName: string;
@@ -14,7 +14,7 @@ interface HomeProductListProps {
   isLiked: boolean;
 }
 
-const HomeProductList = ({
+const ProductListItem = ({
   imageUrl,
   brandName,
   name,
@@ -23,7 +23,7 @@ const HomeProductList = ({
   tags,
   likeCount,
   isLiked,
-}: HomeProductListProps) => {
+}: ProductListItemProps) => {
   const HeartIcon = isLiked ? HeartFilledIcon : HeartBlankedIcon;
 
   return (
@@ -62,4 +62,4 @@ const HomeProductList = ({
   );
 };
 
-export default HomeProductList;
+export default ProductListItem;

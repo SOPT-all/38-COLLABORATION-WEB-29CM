@@ -35,7 +35,7 @@ const HeaderDefault = () => {
               <Link
                 key={label}
                 to={to ?? '#'}
-                className="text-subtitle-02 hover:underline"
+                className="text-subtitle-03-prompt hover:underline"
               >
                 {label}
               </Link>

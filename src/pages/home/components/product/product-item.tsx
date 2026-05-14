@@ -36,7 +36,7 @@ const ProductItem = ({
       {products.map((product) => (
         <div
           key={product.productId}
-          className="border-t border-gray-700 pt-1.5 pb-3"
+          className="border-t border-gray-500 pt-1.5 pb-3"
         >
           <ProductListItem {...product} />
         </div>

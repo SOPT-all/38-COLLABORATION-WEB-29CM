@@ -5,7 +5,7 @@ import { SearchIcon, Logo29cmIcon } from '@shared/icons';
 
 import { NAV_ITEMS, SUB_NAV_ITEMS, ACTION_ITEMS } from './constants';
 
-export default function HeaderDefault() {
+const HeaderDefault = () => {
   return (
     <div className="flex items-start justify-between px-9">
       {/* left */}
@@ -65,4 +65,6 @@ export default function HeaderDefault() {
       </div>
     </div>
   );
-}
+};
+
+export default HeaderDefault;

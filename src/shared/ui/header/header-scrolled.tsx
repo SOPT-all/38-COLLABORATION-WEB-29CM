@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 
 import { ROUTE_PATH } from '@app/router/path';
 
-export default function HeaderScrolled() {
+const HeaderScrolled = () => {
   return (
     <div className="flex w-full items-start justify-between px-9 pb-2.5">
       {/* left */}
@@ -41,4 +41,6 @@ export default function HeaderScrolled() {
       </div>
     </div>
   );
-}
+};
+
+export default HeaderScrolled;

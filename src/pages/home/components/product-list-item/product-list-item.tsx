@@ -36,7 +36,7 @@ const ProductListItem = ({
         <h3 className="text-body-02-regular mb-0.5 line-clamp-1">{name}</h3>
         <div className="text-body-02-bold mb-1 flex gap-1">
           <p className="text-red">{saleRate}%</p>
-          <p>{price.toLocaleString()}</p>
+          <p>{price.toLocaleString('ko-KR')}</p>
         </div>
         <div className="flex gap-[5px] overflow-hidden">
           {tags.map((label, i) => (

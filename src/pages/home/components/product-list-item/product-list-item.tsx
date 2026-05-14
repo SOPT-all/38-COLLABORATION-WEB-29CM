@@ -53,7 +53,9 @@ const ProductListItem = ({
         aria-pressed={isLiked}
         className="flex cursor-pointer flex-col items-center justify-center"
       >
-        <HeartIcon className="h-5 w-5 text-gray-700" />
+        <HeartIcon
+          className={`h-5 w-5 ${isLiked ? 'text-red' : 'text-gray-700'}`}
+        />
       </button>
       <span className="text-body-02-regular text-gray-700">
         {new Intl.NumberFormat('en', {

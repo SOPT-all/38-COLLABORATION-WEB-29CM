@@ -51,7 +51,7 @@ const HeaderDefault = () => {
               key={label}
               aria-label={ariaLabel}
               type="button"
-              className="text-caption-02-regular flex items-center gap-0.5 text-black"
+              className="text-caption-02-regular flex items-center gap-0.5 whitespace-nowrap text-black"
             >
               <Icon className="h-[14px] w-[14px]" />
               {label}

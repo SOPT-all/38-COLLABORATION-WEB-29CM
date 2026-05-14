@@ -12,7 +12,7 @@ interface ProductListItemProps {
   tags: string[];
   likeCount: number;
   isLiked: boolean;
-  onToggleLike: () => void;
+  onToggleLike?: () => void;
 }
 
 const ProductListItem = ({

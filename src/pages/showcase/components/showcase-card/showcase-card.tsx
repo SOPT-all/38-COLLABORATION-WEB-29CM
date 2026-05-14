@@ -15,7 +15,7 @@ const convertDateRange = (startDate: string, endDate: string) => {
   return `${convertDateFormat(startDate)} ~ ${convertDateFormat(endDate).slice(5)}`;
 };
 
-export const ShowcaseCard = ({
+const ShowcaseCard = ({
   variant,
   imageUrl,
   title,
@@ -59,3 +59,5 @@ export const ShowcaseCard = ({
     </div>
   </div>
 );
+
+export default ShowcaseCard;

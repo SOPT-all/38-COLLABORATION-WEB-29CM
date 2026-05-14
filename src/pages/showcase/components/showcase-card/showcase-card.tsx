@@ -34,24 +34,26 @@ export const ShowcaseCard = ({
       alt={title}
       className={cn('w-full', variant === 'big' ? 'h-[362px]' : 'h-[240px]')}
     />
-    <div className="flex w-full flex-col pb-[50px]">
-      <h3
-        className={cn(
-          'text-black',
-          variant === 'big' ? 'text-title-02' : 'text-title-03',
-        )}
-      >
-        {title}
-      </h3>
-      <p className="text-body-01 mt-[6px] line-clamp-2 text-black">
-        {description}
-      </p>
-      <time
-        className={cn(
-          'text-caption-01',
-          variant === 'big' ? 'mt-[14px]' : 'mt-[16px]',
-        )}
-      >
+    <div
+      className={cn(
+        'flex w-full flex-col pb-[50px]',
+        variant === 'big' ? 'gap-[14px]' : 'gap-[16px]',
+      )}
+    >
+      <div className="flex flex-col gap-[6px]">
+        <h3
+          className={cn(
+            'text-black',
+            variant === 'big' ? 'text-title-02' : 'text-title-03',
+          )}
+        >
+          {title}
+        </h3>
+
+        <p className="text-body-01 line-clamp-2 text-black">{description}</p>
+      </div>
+
+      <time className="text-caption-01">
         {convertDateRange(startDate, endDate)}
       </time>
     </div>

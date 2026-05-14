@@ -31,10 +31,10 @@ const ProductListItem = ({
   return (
     <div className="flex gap-3">
       <Image src={imageUrl} alt={name} className="h-16 w-16 rounded-sm" />
-      <div className="flex max-w-[222px] flex-col">
-        <p className="text-caption-02-semibold my-0.5">{brandName}</p>
-        <h3 className="text-body-02-regular mb-0.5 line-clamp-1">{name}</h3>
-        <div className="text-body-02-bold mb-1 flex gap-1">
+      <div className="flex max-w-[222px] flex-col gap-0.5">
+        <p className="text-caption-02-semibold">{brandName}</p>
+        <h3 className="text-body-02-regular line-clamp-1">{name}</h3>
+        <div className="text-body-02-bold mb-0.5 flex gap-1">
           <p className="text-red">{saleRate}%</p>
           <p>{price.toLocaleString('ko-KR')}</p>
         </div>

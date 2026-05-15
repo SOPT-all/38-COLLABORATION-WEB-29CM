@@ -1,8 +1,9 @@
-import { ProductListItem } from '@pages/home/components/product/product-list-item';
 import type { Product } from '@pages/home/components/product/types';
 
 import Image from '@shared/ui/image';
 import { cn } from '@shared/utils/cn';
+
+import ProductListItem from './product-list-item';
 
 interface ProductItemProps {
   imageUrl: string;

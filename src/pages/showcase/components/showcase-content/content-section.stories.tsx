@@ -4,6 +4,13 @@ import ContentSection from './content-section';
 const meta: Meta<typeof ContentSection> = {
   title: 'Showcase/ContentSection',
   component: ContentSection,
+  // 스크롤바 제거
+  decorators: [
+    (Story) => {
+      document.body.style.overflow = 'hidden';
+      return <Story />;
+    },
+  ],
   parameters: {
     layout: 'fullscreen',
   },

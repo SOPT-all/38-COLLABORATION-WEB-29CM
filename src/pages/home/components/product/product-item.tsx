@@ -1,7 +1,5 @@
-import {
-  ProductListItem,
-  type ProductListItemProps,
-} from '@pages/home/components/product/product-list-item';
+import { ProductListItem } from '@pages/home/components/product/product-list-item';
+import type { Product } from '@pages/home/components/product/types';
 
 import Image from '@shared/ui/image';
 import { cn } from '@shared/utils/cn';
@@ -10,7 +8,7 @@ interface ProductItemProps {
   imageUrl: string;
   title: string;
   description: string;
-  products: ProductListItemProps[];
+  products: Product[];
   className?: string;
 }
 
@@ -23,11 +21,7 @@ const ProductItem = ({
 }: ProductItemProps) => {
   return (
     <article className={cn('flex flex-col p-5', className)}>
-      <Image
-        src={imageUrl}
-        alt={title}
-        className="aspect-square h-full w-full"
-      />
+      <Image src={imageUrl} alt={title} className="aspect-square w-full" />
       <div className="flex flex-col gap-2 py-2">
         <h3 className="text-title-03">{title}</h3>
         <p className="text-body-01 line-clamp-1">{description}</p>

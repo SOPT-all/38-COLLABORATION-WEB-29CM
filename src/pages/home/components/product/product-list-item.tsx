@@ -3,16 +3,9 @@ import Chip from '@shared/ui/chip/chip';
 import Image from '@shared/ui/image';
 import { formatCompactCount } from '@shared/utils/format-count';
 
-export interface ProductListItemProps {
-  productId: number;
-  imageUrl: string;
-  brandName: string;
-  name: string;
-  saleRate: number;
-  price: number;
-  tags: string[];
-  likeCount: number;
-  isLiked: boolean;
+import type { Product } from './types';
+
+export interface ProductListItemProps extends Product {
   onToggleLike?: () => void;
 }
 

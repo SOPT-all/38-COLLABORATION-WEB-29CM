@@ -22,14 +22,17 @@ const ShowcaseCard = ({
 }: ShowcaseCardProps) => (
   <div
     className={cn(
-      'flex shrink-0 flex-col items-start',
-      variant === 'big' ? 'w-[636px] gap-4' : 'w-[416px] gap-3',
+      'flex w-full flex-col items-start',
+      variant === 'big' ? 'gap-4' : 'gap-3',
     )}
   >
     <Image
       src={imageUrl}
       alt={title}
-      className={cn('w-full', variant === 'big' ? 'h-[362px]' : 'h-[240px]')}
+      className={cn(
+        'w-full object-cover',
+        variant === 'big' ? 'h-[362px]' : 'h-[240px]',
+      )}
     />
 
     <div

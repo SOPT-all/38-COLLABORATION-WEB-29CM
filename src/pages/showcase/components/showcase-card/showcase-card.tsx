@@ -1,5 +1,5 @@
+import Image from '@shared/ui/image/image';
 import { cn } from '@shared/utils/cn';
-import Image from '@shared/ui/image';
 
 interface ShowcaseCardProps {
   variant: 'big' | 'small';

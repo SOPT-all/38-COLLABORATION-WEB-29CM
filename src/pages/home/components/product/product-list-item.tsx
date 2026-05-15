@@ -1,6 +1,6 @@
 import { HeartBlankedIcon, HeartFilledIcon } from '@shared/icons';
 import Chip from '@shared/ui/chip/chip';
-import Image from '@shared/ui/image';
+import Image from '@shared/ui/image/image';
 import { formatCompactCount } from '@shared/utils/format-count';
 
 import type { Product } from './types';

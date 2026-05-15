@@ -1,6 +1,6 @@
 import type { Product } from '@pages/home/components/product/types';
 
-import Image from '@shared/ui/image';
+import Image from '@shared/ui/image/image';
 import { cn } from '@shared/utils/cn';
 
 import ProductListItem from './product-list-item';

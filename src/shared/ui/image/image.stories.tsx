@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import Image from './image';
+import Image from './image/image';
 
 const meta = {
   title: 'Shared/ui/Image',

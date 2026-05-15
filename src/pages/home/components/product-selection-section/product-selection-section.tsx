@@ -1,4 +1,4 @@
-import Image from '@shared/ui/image';
+import Image from '@shared/ui/image/image';
 
 import ProductItem from '../product/product-item';
 import type { Product } from '../product/types';

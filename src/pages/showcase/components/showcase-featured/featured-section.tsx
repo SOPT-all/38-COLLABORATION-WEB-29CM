@@ -15,7 +15,7 @@ interface FeaturedSectionProps {
 
 const FeaturedSection = ({ featured }: FeaturedSectionProps) => {
   return (
-    <section className="py-16 pr-[42px] pl-9">
+    <section className="py-16 px-9">
       <ul className="grid w-fit grid-cols-1 gap-4 lg:grid-cols-2">
         {featured.map(({ showcaseId, ...props }) => (
           <li key={showcaseId}>

@@ -28,7 +28,7 @@ const ProductSelectionSection = ({
 }: ProductSelectionSectionProps) => {
   return (
     <section className="flex gap-6">
-      <div className="sticky top-21 aspect-578/767 h-[calc(100vh-84px)] shrink-0 self-start">
+      <div className="sticky top-21 aspect-578/680 h-[calc(100vh-84px)] shrink-0 self-start">
         <div className="relative h-full w-full overflow-hidden">
           <Image src={heroImageUrl} alt={title} />
           <div className="absolute bottom-8.5 left-8.5 text-white">

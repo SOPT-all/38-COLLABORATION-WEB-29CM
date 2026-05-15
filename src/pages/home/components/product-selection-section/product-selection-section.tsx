@@ -11,7 +11,7 @@ interface Selection {
   products: Product[];
 }
 
-export interface ProductSelectionSectionData {
+interface ProductSelectionSectionData {
   sectionId: number;
   heroImageUrl: string;
   title: string;

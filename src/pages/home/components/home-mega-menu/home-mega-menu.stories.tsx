@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { MEGA_MENU_GROUPS } from './constants';
+import { MIDDLE_CATEGORIES } from './constants';
 import HomeMegaMenu from './home-mega-menu';
 
 const meta = {
   title: 'Pages/Home/HomeMegaMenu',
   component: HomeMegaMenu,
   args: {
-    groups: MEGA_MENU_GROUPS,
+    middleCategories: MIDDLE_CATEGORIES,
   },
 } satisfies Meta<typeof HomeMegaMenu>;
 

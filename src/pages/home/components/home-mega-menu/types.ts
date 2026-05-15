@@ -1,12 +1,10 @@
-export interface MegaMenuItem {
-  categoryId: number;
+export interface SubCategory {
+  subCategoryId: number;
   name: string;
-  displayOrder: number;
 }
 
-export interface MegaMenuGroup {
-  groupId: number;
+export interface MiddleCategory {
+  middleCategoryId: number;
   name: string;
-  displayOrder: number;
-  items: MegaMenuItem[];
+  subCategories: SubCategory[];
 }

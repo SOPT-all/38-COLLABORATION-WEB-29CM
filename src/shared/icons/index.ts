@@ -3,6 +3,7 @@ export { default as ChevronRightIcon } from './assets/icn-chevron-right.svg?reac
 export { default as ChevronRightSmallIcon } from './assets/icn-chevron-right-small.svg?react';
 export { default as ChevronUpIcon } from './assets/icn-chevron-up.svg?react';
 export { default as ChevronUpSmallIcon } from './assets/icn-chevron-up-small.svg?react';
+export { default as ChevronDownIcon } from './assets/icn-chevron-down.svg?react';
 export { default as HeartBlankedIcon } from './assets/icn-heart-blanked.svg?react';
 export { default as HeartFilledIcon } from './assets/icn-heart-filled.svg?react';
 export { default as LoginIcon } from './assets/icn-login.svg?react';

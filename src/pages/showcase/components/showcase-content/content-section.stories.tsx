@@ -51,7 +51,7 @@ const mockSections = [
         endDate: '2026-05-12',
       },
       {
-        showcaseId: 11,
+        showcaseId: 14,
         title: '전통과 현대가 만나는 순간 루트파인더',
         description: '유연한 실루엣의 여름 컬렉션을 만나보세요.',
         imageUrl: 'https://s3.example.com/showcases/11.png',
@@ -59,7 +59,7 @@ const mockSections = [
         endDate: '2026-05-12',
       },
       {
-        showcaseId: 12,
+        showcaseId: 15,
         title: '자연에서 영감을 받은 리빙 브랜드',
         description: '일상에 자연의 감성을 더하는 오브제 컬렉션.',
         imageUrl: 'https://s3.example.com/showcases/12.png',
@@ -67,7 +67,7 @@ const mockSections = [
         endDate: '2026-05-12',
       },
       {
-        showcaseId: 13,
+        showcaseId: 16,
         title: '감각적인 주방 소품의 모든 것',
         description: '요리를 더 즐겁게 만드는 디자인 주방용품 모음.',
         imageUrl: 'https://s3.example.com/showcases/13.png',
@@ -110,7 +110,11 @@ const mockSections = [
 ];
 
 export const Default: Story = {
-  args: {
-    sections: mockSections,
-  },
+  render: () => (
+    <>
+      {mockSections.map((section) => (
+        <ContentSection key={section.sectionId} section={section} />
+      ))}
+    </>
+  ),
 };

@@ -18,24 +18,21 @@ interface ShowcaseSection {
 }
 
 interface ContentSectionProps {
-  sections: ShowcaseSection[];
+  section: ShowcaseSection;
 }
 
-const ContentSection = ({ sections }: ContentSectionProps) => {
+const ContentSection = ({ section }: ContentSectionProps) => {
+  const { theme, title, showcases } = section;
   return (
     <section>
-      {sections.map(({ sectionId, theme, title, showcases }) => (
-        <article key={sectionId}>
-          <ShowcaseSectionTitle theme={theme} title={title} />
-          <ul className="grid grid-cols-3 gap-x-4 gap-y-[45px] py-16 pr-[50px] pl-9">
-            {showcases.map(({ showcaseId, ...props }) => (
-              <li key={showcaseId}>
-                <ShowcaseCard variant="small" {...props} />
-              </li>
-            ))}
-          </ul>
-        </article>
-      ))}
+      <ShowcaseSectionTitle theme={theme} title={title} />
+      <ul className="grid grid-cols-3 gap-x-4 gap-y-[45px] px-9 py-16">
+        {showcases.map(({ showcaseId, ...props }) => (
+          <li key={showcaseId}>
+            <ShowcaseCard variant="small" {...props} />
+          </li>
+        ))}
+      </ul>
     </section>
   );
 };

@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import BtnMoreLoad from './btn-more-load';
+import MoreLoadButton from './more-load-button';
 
 const meta = {
-  title: 'Pages/Home/BtnMoreLoad',
-  component: BtnMoreLoad,
-} satisfies Meta<typeof BtnMoreLoad>;
+  title: 'Pages/Home/MoreLoadButton',
+  component: MoreLoadButton,
+} satisfies Meta<typeof MoreLoadButton>;
 
 export default meta;
 

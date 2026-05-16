@@ -3,14 +3,14 @@ import type { ButtonHTMLAttributes } from 'react';
 import { ChevronDownIcon } from '@shared/icons';
 import { cn } from '@shared/utils/cn';
 
-type BtnMoreLoadProps = ButtonHTMLAttributes<HTMLButtonElement>;
+type MoreLoadButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-const BtnMoreLoad = ({ className, ...props }: BtnMoreLoadProps) => {
+const MoreLoadButton = ({ className, ...props }: MoreLoadButtonProps) => {
   return (
     <button
       type="button"
       className={cn(
-        'flex h-[48px] w-[132px] items-center justify-center gap-[4px] rounded-[4px] border border-gray-700 bg-white px-[34px] py-[12px]',
+        'flex h-12 w-[132px] items-center justify-center gap-1 rounded border border-gray-700 bg-white px-[34px] py-3',
         className,
       )}
       {...props}
@@ -18,9 +18,9 @@ const BtnMoreLoad = ({ className, ...props }: BtnMoreLoadProps) => {
       <span className="text-subtitle-01 tracking-[-0.04em] whitespace-nowrap text-black">
         더보기
       </span>
-      <ChevronDownIcon className="h-[24px] w-[24px]" />
+      <ChevronDownIcon className="h-6 w-6" />
     </button>
   );
 };
 
-export default BtnMoreLoad;
+export default MoreLoadButton;

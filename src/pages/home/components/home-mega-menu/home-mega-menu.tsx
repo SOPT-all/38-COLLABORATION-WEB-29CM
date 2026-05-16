@@ -6,20 +6,20 @@ interface HomeMegaMenuProps {
 
 const HomeMegaMenu = ({ middleCategories }: HomeMegaMenuProps) => {
   return (
-    <div className="flex pt-[22px] pl-9">
-      {middleCategories.map((group) => (
-        <div key={group.middleCategoryId} className="w-[149px]">
-          <p className="text-caption-01 flex items-center px-[10px] py-2">
-            {group.name}
-          </p>
+    <div className="flex">
+      {middleCategories.map(({ middleCategoryId, name, subCategories }) => (
+        <div key={middleCategoryId} className="pt-[22px] pl-9 pr-[50px] pb-[22px]">
+          <span className="text-caption-01 flex items-center px-[10px] py-2">
+            {name}
+          </span>
           <ul>
-            {group.subCategories.map((item) => (
-              <li key={item.subCategoryId}>
+            {subCategories.map(({ subCategoryId, name }) => (
+              <li key={subCategoryId}>
                 <button
                   type="button"
-                  className="text-body-02-regular flex items-center whitespace-nowrap px-[10px] py-[5px]"
+                  className="text-body-02-regular flex items-center px-[10px] py-[5px] whitespace-nowrap"
                 >
-                  {item.name}
+                  {name}
                 </button>
               </li>
             ))}

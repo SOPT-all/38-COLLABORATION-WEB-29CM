@@ -12,7 +12,7 @@ const HomeMegaMenu = ({ middleCategories }: HomeMegaMenuProps) => {
           key={middleCategoryId}
           className="pt-[22px] pr-[50px] pb-[22px] pl-9"
         >
-          <span className="text-caption-01 px-[10px] py-2">{name}</span>
+          <span className="text-caption-01 flex items-center px-[10px] py-2">{name}</span>
           <ul>
             {subCategories.map(({ subCategoryId, name }) => (
               <li key={subCategoryId}>

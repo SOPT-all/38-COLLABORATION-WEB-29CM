@@ -7,14 +7,14 @@ import { BANNER_IMAGES, SECTIONS, SHORTCUTS } from './constants';
 
 const HomePage = () => {
   return (
-    <div>
+    <>
       <HomeMenu categories={CATEGORIES} />
       <BannerCarousel images={BANNER_IMAGES} />
       <CategorySection categories={SHORTCUTS} />
       {SECTIONS.map((section) => (
         <ProductSelectionSection key={section.sectionId} section={section} />
       ))}
-    </div>
+    </>
   );
 };
 

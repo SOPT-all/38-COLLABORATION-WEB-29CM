@@ -14,7 +14,7 @@ interface GetHomeCarouselsResponse {
   carousels: CarouselImage[];
 }
 
-export const getHomeCarousels = async (): Promise<CarouselImage[]> => {
+const getHomeCarousels = async (): Promise<CarouselImage[]> => {
   const data = await http.get<GetHomeCarouselsResponse>(
     API_ENDPOINTS.HOME.CAROUSELS,
   );
@@ -22,7 +22,7 @@ export const getHomeCarousels = async (): Promise<CarouselImage[]> => {
   return data?.carousels ?? [];
 };
 
-export const homeCarouselsQueryOptions = queryOptions({
+const homeCarouselsQueryOptions = queryOptions({
   queryKey: homeQueryKeys.carousels(),
   queryFn: getHomeCarousels,
   staleTime: 1000 * 60 * 5,

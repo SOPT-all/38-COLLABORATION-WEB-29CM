@@ -6,13 +6,13 @@ const ShowcasePage = () => {
   const { featured, sections } = MOCK_SHOWCASE_RESPONSE;
 
   return (
-    <div className="flex flex-col">
+    <>
       <FeaturedSection featured={featured} />
 
       {sections.map((section) => (
         <ContentSection key={section.sectionId} section={section} />
       ))}
-    </div>
+    </>
   );
 };
 

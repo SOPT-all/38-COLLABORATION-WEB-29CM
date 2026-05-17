@@ -1,15 +1,15 @@
 import { HeartBlankedIcon, HeartFilledIcon } from '@shared/icons';
 import Chip from '@shared/ui/chip/chip';
-import Image from '@shared/ui/image';
+import Image from '@shared/ui/image/image';
 import { formatCompactCount } from '@shared/utils/format-count';
 
 import type { Product } from './types';
 
-export interface ProductListItemProps extends Product {
+interface ProductListItemProps extends Product {
   onToggleLike?: () => void;
 }
 
-export const ProductListItem = ({
+const ProductListItem = ({
   imageUrl,
   brandName,
   name,
@@ -23,8 +23,12 @@ export const ProductListItem = ({
   const HeartIcon = isLiked ? HeartFilledIcon : HeartBlankedIcon;
 
   return (
-    <div className="flex gap-3">
-      <Image src={imageUrl} alt={name} className="h-16 w-16 rounded-sm" />
+    <div className="flex gap-3 pr-2.5">
+      <Image
+        src={imageUrl}
+        alt={name}
+        className="h-16 w-16 shrink-0 rounded-sm"
+      />
       <div className="flex w-full max-w-[222px] flex-col gap-0.5">
         <span className="text-caption-02-semibold">{brandName}</span>
         <p className="text-body-02-regular line-clamp-1">{name}</p>

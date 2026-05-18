@@ -11,7 +11,7 @@ const ErrorPage = () => {
         </a>
 
         <div className="flex flex-col items-center gap-3">
-          <p className="text-subtitle-02 text-gray-800">ERROR</p>
+          <span className="text-subtitle-02 text-gray-800">ERROR</span>
           <h1 className="text-title-02 text-gray-900">
             페이지를 불러오지 못했어요
           </h1>

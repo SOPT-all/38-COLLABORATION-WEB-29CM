@@ -1,25 +1,16 @@
+import { Suspense } from 'react';
+
 import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
+import DeferredComponent from '@shared/ui/deferred-component';
+import ShowcaseSkeleton from '@shared/ui/skeleton/showcase-skeleton';
 
 import { useShowcaseFeedQuery } from './api/showcases';
 import ContentSection from './components/showcase-content/content-section';
 import FeaturedSection from './components/showcase-featured/featured-section';
-<<<<<<< HEAD
-import { MOCK_SHOWCASE_RESPONSE } from './showcase-page.mock';
-import DeferredComponent from '@shared/ui/deferred-component';
-import ContentSkeleton from '@shared/ui/skeleton/content-skeleton';
-import { Suspense } from 'react';
-=======
->>>>>>> bf051f9ca0b2d4cf70d534f986f7e0fe63ac42cf
 
-const ShowcasePage = () => {
-  const {
-    data,
-    fetchNextPage,
-    hasNextPage,
-    isError,
-    isFetchingNextPage,
-    isLoading,
-  } = useShowcaseFeedQuery();
+const ShowcaseContent = () => {
+  const { data, fetchNextPage, hasNextPage, isFetchingNextPage } =
+    useShowcaseFeedQuery();
   const observerTargetRef = useInfiniteScroll({
     fetchNextPage,
     hasNextPage,
@@ -30,14 +21,6 @@ const ShowcasePage = () => {
   const sections = data?.sections ?? [];
   const isEmpty = featured.length === 0 && sections.length === 0;
 
-  if (isLoading) {
-    return null;
-  }
-
-  if (isError) {
-    return <div className="px-9 py-16">쇼케이스를 불러오지 못했습니다.</div>;
-  }
-
   if (isEmpty) {
     return <div className="px-9 py-16">표시할 쇼케이스가 없습니다.</div>;
   }
@@ -47,21 +30,23 @@ const ShowcasePage = () => {
       {featured.length > 0 && <FeaturedSection featured={featured} />}
 
       {sections.map((section) => (
-        <Suspense
-          key={section.sectionId}
-          fallback={
-            <DeferredComponent>
-              <ContentSkeleton />
-            </DeferredComponent>
-          }
-        >
-          <ContentSection section={section} />
-        </Suspense>
+        <ContentSection key={section.sectionId} section={section} />
       ))}
-
       <div ref={observerTargetRef} className="h-1" />
     </>
   );
 };
+
+const ShowcasePage = () => (
+  <Suspense
+    fallback={
+      <DeferredComponent>
+        <ShowcaseSkeleton />
+      </DeferredComponent>
+    }
+  >
+    <ShowcaseContent />
+  </Suspense>
+);
 
 export default ShowcasePage;

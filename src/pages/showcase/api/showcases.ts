@@ -23,6 +23,11 @@ interface ShowcaseFeedResponse {
   pageInfo: ShowcasePageInfo;
 }
 
+interface ShowcaseFeed {
+  featured: Showcase[];
+  sections: ShowcaseSection[];
+}
+
 interface ShowcaseFeedParams {
   cursor?: string;
   size?: number;
@@ -65,7 +70,7 @@ const mergeSections = (
   return Array.from(sectionMap.values());
 };
 
-const selectShowcaseFeed = (pages: ShowcaseFeedResponse[]) => {
+const selectShowcaseFeed = (pages: ShowcaseFeedResponse[]): ShowcaseFeed => {
   const [firstPage] = pages;
 
   if (!firstPage) {

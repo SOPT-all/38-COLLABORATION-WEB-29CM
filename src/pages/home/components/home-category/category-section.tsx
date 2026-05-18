@@ -1,13 +1,9 @@
+import type { ShortCut } from '@pages/home/types';
+
 import CategoryButton from './category-button';
 
-interface Category {
-  name: string;
-  imageUrl: string;
-  categoryId: number;
-}
-
 interface CategorySectionProps {
-  categories: Category[];
+  categories: ShortCut[];
 }
 
 const CategorySection = ({ categories }: CategorySectionProps) => {

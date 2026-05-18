@@ -1,27 +1,12 @@
+import type { Section } from '@pages/home/types';
+
 import Image from '@shared/ui/image/image';
 
 import HomeCtaButton from '../cta-button/home-cta-button';
 import ProductItem from '../product/product-item';
-import type { Product } from '../product/types';
-
-interface Selection {
-  selectionId: number;
-  imageUrl: string;
-  title: string;
-  description: string;
-  products: Product[];
-}
-
-interface ProductSelectionSectionData {
-  sectionId: number;
-  heroImageUrl: string;
-  title: string;
-  description: string;
-  selections: Selection[];
-}
 
 interface ProductSelectionSectionProps {
-  section: ProductSelectionSectionData;
+  section: Section;
   onClickMore?: () => void;
 }
 
@@ -46,6 +31,7 @@ const ProductSelectionSection = ({
           {selections.map((selection) => (
             <ProductItem
               key={selection.selectionId}
+              selectionId={selection.selectionId}
               imageUrl={selection.imageUrl}
               title={selection.title}
               description={selection.description}

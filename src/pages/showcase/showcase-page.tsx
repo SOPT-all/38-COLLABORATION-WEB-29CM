@@ -1,7 +1,8 @@
+import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
+
 import { useShowcaseFeedQuery } from './api/showcases';
 import ContentSection from './components/showcase-content/content-section';
 import FeaturedSection from './components/showcase-featured/featured-section';
-import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
 
 const ShowcasePage = () => {
   const {

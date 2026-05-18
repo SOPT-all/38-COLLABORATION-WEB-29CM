@@ -1,3 +1,5 @@
+export type ViewerType = 'user' | 'guest';
+
 export interface ShortCut {
   shortcutId: number;
   name: string;

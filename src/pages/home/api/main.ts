@@ -1,7 +1,7 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
 
 import { homeQueryKeys } from '@pages/home/api/query-keys';
-import type { Section, ShortCut } from '@pages/home/types';
+import type { Section, ShortCut, ViewerType } from '@pages/home/types';
 
 import { API_ENDPOINTS, http } from '@shared/api';
 
@@ -20,7 +20,7 @@ interface HomeMainResponse {
 }
 
 interface HomeMainParams {
-  viewerType: 'user' | 'guest';
+  viewerType: ViewerType;
   cursor?: string;
   size?: number;
 }
@@ -45,7 +45,7 @@ const selectHomeMain = (pages: HomeMainResponse[]) => {
   };
 };
 
-export const useHomeMainQuery = (viewerType: 'user' | 'guest') => {
+export const useHomeMainQuery = (viewerType: ViewerType) => {
   return useInfiniteQuery({
     queryKey: homeQueryKeys.main(viewerType),
     queryFn: ({ pageParam }) =>

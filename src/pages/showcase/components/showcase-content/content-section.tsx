@@ -1,21 +1,6 @@
-import ShowcaseSectionTitle from './showcase-section-title';
+import type { ShowcaseSection } from '../../types';
 import ShowcaseCard from '../showcase-card/showcase-card';
-
-interface Showcase {
-  showcaseId: number;
-  title: string;
-  description: string;
-  imageUrl: string;
-  startDate: string;
-  endDate: string;
-}
-
-interface ShowcaseSection {
-  sectionId: number;
-  theme: string;
-  title: string;
-  showcases: Showcase[];
-}
+import ShowcaseSectionTitle from './showcase-section-title';
 
 interface ContentSectionProps {
   section: ShowcaseSection;

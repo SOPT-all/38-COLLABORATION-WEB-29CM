@@ -1,8 +1,8 @@
-interface Notice {
+interface NoticeItem {
+  noticeId: number;
   title: string;
-  displayOrder: number;
 }
 
-export interface NoticeSectionProps {
-  notices: Notice[];
+export interface NoticesResponse {
+  notices: NoticeItem[];
 }

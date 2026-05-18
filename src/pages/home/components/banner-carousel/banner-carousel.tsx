@@ -3,23 +3,18 @@ import { useEffect, useState } from 'react';
 import { ChevronRightIcon } from '@shared/icons';
 import { cn } from '@shared/utils/cn';
 
-interface CarouselImage {
-  carouselId: number;
-  imageUrl: string;
-  altText: string;
-}
+import { useHomeCarouselsQuery } from '@pages/home/api/carousels';
 
 interface BannerCarouselProps {
-  images: CarouselImage[];
   interval?: number;
   className?: string;
 }
 
 const BannerCarousel = ({
-  images,
   interval = 5000,
   className,
 }: BannerCarouselProps) => {
+  const { data: images } = useHomeCarouselsQuery();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -32,9 +27,6 @@ const BannerCarousel = ({
 
     return () => window.clearInterval(timer);
   }, [images.length, interval, isPaused]);
-
-  if (images.length === 0)
-    return <div className="aspect-20/9 w-full animate-pulse bg-gray-200" />;
 
   return (
     <section

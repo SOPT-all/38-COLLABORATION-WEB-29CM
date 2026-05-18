@@ -33,7 +33,8 @@ const BannerCarousel = ({
     return () => window.clearInterval(timer);
   }, [images.length, interval, isPaused]);
 
-  if (images.length === 0) return null;
+  if (images.length === 0)
+    return <div className="aspect-20/9 w-full animate-pulse bg-gray-200" />;
 
   return (
     <section

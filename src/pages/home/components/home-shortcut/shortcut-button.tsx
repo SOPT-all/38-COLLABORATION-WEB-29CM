@@ -2,17 +2,17 @@ import type { ButtonHTMLAttributes } from 'react';
 
 import { cn } from '@shared/utils/cn';
 
-interface CategoryButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ShortcutButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   imageUrl: string;
   label: string;
 }
 
-const CategoryButton = ({
+const ShortcutButton = ({
   imageUrl,
   label,
   className,
   ...props
-}: CategoryButtonProps) => {
+}: ShortcutButtonProps) => {
   return (
     <button
       type="button"
@@ -32,4 +32,4 @@ const CategoryButton = ({
   );
 };
 
-export default CategoryButton;
+export default ShortcutButton;

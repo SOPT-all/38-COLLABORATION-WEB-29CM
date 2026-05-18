@@ -3,7 +3,7 @@ import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
 import { useHomeCarouselsQuery } from './api/carousels';
 import { useHomeMainQuery } from './api/main';
 import BannerCarousel from './components/banner-carousel/banner-carousel';
-import CategorySection from './components/home-category/category-section';
+import ShortcutSection from './components/home-shortcut/shortcut-section';
 import { CATEGORIES } from './components/home-menu/constants';
 import HomeMenu from './components/home-menu/home-menu';
 import ProductSelectionSection from './components/product-selection-section/product-selection-section';
@@ -37,7 +37,7 @@ const HomePage = () => {
     <>
       <HomeMenu categories={CATEGORIES} />
       <BannerCarousel images={carousels} />
-      <CategorySection categories={main.shortcuts} />
+      <ShortcutSection shortcuts={main.shortcuts} />
       {main.sections.map((section) => (
         <ProductSelectionSection key={section.sectionId} section={section} />
       ))}

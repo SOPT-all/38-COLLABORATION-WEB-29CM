@@ -1,4 +1,4 @@
-import type { MiddleCategory } from './types';
+import type { MiddleCategory } from '../../types';
 
 interface HomeMegaMenuProps {
   middleCategories: MiddleCategory[];
@@ -20,7 +20,7 @@ const HomeMegaMenu = ({ middleCategories }: HomeMegaMenuProps) => {
               <li key={subCategoryId}>
                 <button
                   type="button"
-                  className="text-body-02-regular px-[10px] py-[5px] whitespace-nowrap"
+                  className="text-body-02-regular px-[10px] py-[5px] whitespace-nowrap hover:text-body-02-bold cursor-pointer"
                 >
                   {name}
                 </button>

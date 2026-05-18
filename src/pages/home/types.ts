@@ -8,3 +8,9 @@ export interface MiddleCategory {
   name: string;
   subCategories: SubCategory[];
 }
+
+export interface TopCategory {
+  topCategoryId: number;
+  name: string;
+  middleCategories: MiddleCategory[];
+}

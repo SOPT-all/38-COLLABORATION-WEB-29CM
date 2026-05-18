@@ -28,6 +28,7 @@ const HomeMenu = () => {
             type="button"
             className="group flex flex-col items-center"
             onMouseEnter={() => setHoveredId(category.topCategoryId)}
+            onFocus={() => setHoveredId(category.topCategoryId)}
           >
             <span className="text-subtitle-02 tracking-[0.04em] text-black">
               {category.name}

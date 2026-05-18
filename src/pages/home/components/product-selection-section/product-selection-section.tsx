@@ -18,7 +18,7 @@ const ProductSelectionSection = ({
     <section className="flex gap-6">
       <div className="sticky top-21 aspect-578/680 h-[calc(100vh-84px)] shrink-0 self-start">
         <div className="relative h-full w-full overflow-hidden">
-          <Image src={heroImageUrl} alt={title} />
+          <Image src={heroImageUrl} alt={title} className="h-full w-full" />
           <div className="absolute bottom-8.5 left-8.5 text-white">
             <h2 className="text-title-01">{title}</h2>
             <p className="text-subtitle-01">{description}</p>

@@ -6,8 +6,13 @@ import Image from '@shared/ui/image/image';
 const ProductPage = () => {
   const { data } = useHomeMainQuery('guest');
   const firstSection = data?.sections[0];
-  const allSelections = data?.sections.flatMap((s) => s.selections).slice(0, 15) ?? [];
-  const { heroImageUrl = '', title = '', description = '' } = firstSection ?? {};
+  const allSelections =
+    data?.sections.flatMap((s) => s.selections).slice(0, 15) ?? [];
+  const {
+    heroImageUrl = '',
+    title = '',
+    description = '',
+  } = firstSection ?? {};
 
   return (
     <div>
@@ -22,7 +27,7 @@ const ProductPage = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 px-9 md:grid-cols-3 xl:grid-cols-4">
+      <div className="grid grid-cols-2 px-9 pb-5 md:grid-cols-3 xl:grid-cols-4">
         {allSelections.map((selection) => (
           <ProductItem key={selection.selectionId} {...selection} />
         ))}

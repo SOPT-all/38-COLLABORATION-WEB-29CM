@@ -52,7 +52,7 @@ const HomePage = () => {
   }
 
   return (
-    <>
+    <div className="pb-10">
       <HomeMenu />
       <BannerCarousel images={carousels} />
       <ShortcutSection shortcuts={main.shortcuts} />
@@ -64,7 +64,7 @@ const HomePage = () => {
         />
       ))}
       {shouldShowMoreButton && (
-        <div className="bg-white-linear relative -mt-140 flex h-144 items-end justify-center pb-12">
+        <div className="bg-white-linear relative -mt-100 flex h-144 items-end justify-center pb-12">
           <MoreLoadButton
             onClick={handleClickMore}
             disabled={isFetchingNextPage}
@@ -73,7 +73,7 @@ const HomePage = () => {
       )}
       <div ref={observerTargetRef} className="h-1" />
       <FloatingScrollTopButton />
-    </>
+    </div>
   );
 };
 

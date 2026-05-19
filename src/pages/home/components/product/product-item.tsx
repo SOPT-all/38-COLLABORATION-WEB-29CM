@@ -7,6 +7,7 @@ import ProductListItem from './product-list-item';
 
 interface ProductItemProps extends Selection {
   className?: string;
+  onToggleLike?: (productId: number) => void;
 }
 
 const ProductItem = ({
@@ -15,6 +16,7 @@ const ProductItem = ({
   description,
   products,
   className,
+  onToggleLike,
 }: ProductItemProps) => {
   return (
     <article className={cn('flex flex-col p-5', className)}>
@@ -29,7 +31,10 @@ const ProductItem = ({
           key={product.productId}
           className="border-t border-gray-500 pt-1.5 pb-3"
         >
-          <ProductListItem {...product} />
+          <ProductListItem
+            {...product}
+            onToggleLike={() => onToggleLike?.(product.productId)}
+          />
         </div>
       ))}
     </article>

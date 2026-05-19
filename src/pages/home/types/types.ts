@@ -1,5 +1,3 @@
-export type ViewerType = 'user' | 'guest';
-
 export interface ShortCut {
   shortcutId: number;
   name: string;
@@ -33,4 +31,21 @@ export interface Product {
   tags: string[];
   likeCount: number;
   isLiked: boolean;
+}
+
+export interface SubCategory {
+  subCategoryId: number;
+  name: string;
+}
+
+export interface MiddleCategory {
+  middleCategoryId: number;
+  name: string;
+  subCategories: SubCategory[];
+}
+
+export interface TopCategory {
+  topCategoryId: number;
+  name: string;
+  middleCategories: MiddleCategory[];
 }

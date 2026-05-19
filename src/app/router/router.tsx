@@ -6,12 +6,14 @@ import ErrorPage from '@pages/error/error-page';
 
 import { ROUTE_PATH } from './path';
 
-const fallback = () => <div>Loading...</div>;
+import { Suspense } from 'react';
+import HomeSkeleton from '@shared/ui/skeleton/home-skeleton';
+import ShowcaseSkeleton from '@shared/ui/skeleton/showcase-skeleton';
+import DeferredComponent from '@shared/ui/deferred-component';
 
 export const router = createBrowserRouter([
   {
     Component: Layout,
-    HydrateFallback: fallback,
     ErrorBoundary: ErrorPage,
     children: [
       {
@@ -19,7 +21,19 @@ export const router = createBrowserRouter([
         lazy: async () => {
           const { default: HomePage } = await import('@pages/home/home-page');
 
-          return { Component: HomePage };
+          return {
+            Component: () => (
+              <Suspense
+                fallback={
+                  <DeferredComponent>
+                    <HomeSkeleton />
+                  </DeferredComponent>
+                }
+              >
+                <HomePage />
+              </Suspense>
+            ),
+          };
         },
       },
       {
@@ -28,7 +42,19 @@ export const router = createBrowserRouter([
           const { default: ShowcasePage } =
             await import('@pages/showcase/showcase-page');
 
-          return { Component: ShowcasePage };
+          return {
+            Component: () => (
+              <Suspense
+                fallback={
+                  <DeferredComponent>
+                    <ShowcaseSkeleton />
+                  </DeferredComponent>
+                }
+              >
+                <ShowcasePage />
+              </Suspense>
+            ),
+          };
         },
       },
       {

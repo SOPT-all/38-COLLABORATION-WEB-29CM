@@ -1,54 +1,70 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router';
 
+import { useViewerType } from '@shared/auth/viewer-type';
 import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
+import FloatingScrollTopButton from '@shared/ui/floating-scroll-top-button/floating-scroll-top-button';
 
 import { useHomeCarouselsQuery } from './api/carousels';
 import { useHomeMainQuery } from './api/main';
 import BannerCarousel from './components/banner-carousel/banner-carousel';
-import { CATEGORIES } from './components/home-menu/constants';
+import MoreLoadButton from './components/btn-more-load/more-load-button';
 import HomeMenu from './components/home-menu/home-menu';
 import ShortcutSection from './components/home-shortcut/shortcut-section';
 import ProductSelectionSection from './components/product-selection-section/product-selection-section';
+import { useToggleProductLikeMutation } from './hooks/use-toggle-product-like-mutation';
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const { data: carousels = [] } = useHomeCarouselsQuery();
+  const { data: images } = useHomeCarouselsQuery();
+  const [isInfiniteScrollEnabled, setIsInfiniteScrollEnabled] = useState(false);
+
+  const { viewerType } = useViewerType();
+  const { toggleProductLike } = useToggleProductLikeMutation(viewerType);
   const {
-    data: main = { sections: [], shortcuts: [] },
+    data: main,
     fetchNextPage,
     hasNextPage,
     isFetchingNextPage,
-    isLoading,
-    isError,
-  } = useHomeMainQuery('guest');
+  } = useHomeMainQuery(viewerType);
 
   const observerTargetRef = useInfiniteScroll({
     fetchNextPage,
     hasNextPage,
     isFetchingNextPage,
+    enabled: isInfiniteScrollEnabled,
   });
 
-  if (isLoading) {
-    return null;
-  }
+  const shouldShowMoreButton = !isInfiniteScrollEnabled && hasNextPage;
 
-  if (isError) {
-    return <div className="px-9 py-16">데이터를 불러오지 못했습니다.</div>;
-  }
+  const handleClickMore = () => {
+    setIsInfiniteScrollEnabled(true);
+    fetchNextPage();
+  };
 
   return (
-    <div className="min-w-[1440px]">
-      <HomeMenu categories={CATEGORIES} />
-      <BannerCarousel images={carousels} />
+    <div className="min-w-[1440px] pb-10">
+      <HomeMenu />
+      <BannerCarousel images={images} />
       <ShortcutSection shortcuts={main.shortcuts} />
       {main.sections.map((section) => (
         <ProductSelectionSection
           key={section.sectionId}
           section={section}
+          onToggleLike={toggleProductLike}
           onClickMore={() => navigate('/product')}
         />
       ))}
+      {shouldShowMoreButton && (
+        <div className="bg-white-linear relative -mt-100 flex h-144 items-end justify-center pb-12">
+          <MoreLoadButton
+            onClick={handleClickMore}
+            disabled={isFetchingNextPage}
+          />
+        </div>
+      )}
       <div ref={observerTargetRef} className="h-1" />
+      <FloatingScrollTopButton />
     </div>
   );
 };

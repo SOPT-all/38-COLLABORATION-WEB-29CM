@@ -7,11 +7,13 @@ import ProductItem from '../product/product-item';
 
 interface ProductSelectionSectionProps {
   section: Section;
+  onToggleLike?: (productId: number) => void;
   onClickMore?: () => void;
 }
 
 const ProductSelectionSection = ({
   section: { heroImageUrl, title, description, selections },
+  onToggleLike,
   onClickMore,
 }: ProductSelectionSectionProps) => {
   return (
@@ -37,6 +39,7 @@ const ProductSelectionSection = ({
               title={selection.title}
               description={selection.description}
               products={selection.products}
+              onToggleLike={onToggleLike}
             />
           ))}
         </div>

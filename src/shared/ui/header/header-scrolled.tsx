@@ -4,7 +4,8 @@ import { ROUTE_PATH } from '@app/router/path';
 
 import { Logo29cmIcon, SearchIcon } from '@shared/icons';
 
-import { ACTION_ITEMS, NAV_ITEMS } from './constants';
+import { NAV_ITEMS } from './constants';
+import HeaderActionItems from './header-action-items';
 
 const HeaderScrolled = () => {
   return (
@@ -30,11 +31,7 @@ const HeaderScrolled = () => {
 
       {/* right */}
       <div className="flex items-center gap-2">
-        {ACTION_ITEMS.map(({ label, icon: Icon, ariaLabel }) => (
-          <button key={label} aria-label={ariaLabel} type="button">
-            <Icon className="h-5 w-5" />
-          </button>
-        ))}
+        <HeaderActionItems iconClassName="h-5 w-5" />
 
         <button aria-label="검색" type="button">
           <SearchIcon className="h-5 w-5" />

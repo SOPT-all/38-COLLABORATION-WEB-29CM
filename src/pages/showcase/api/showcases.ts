@@ -1,4 +1,4 @@
-import { useInfiniteQuery } from '@tanstack/react-query';
+import { useSuspenseInfiniteQuery } from '@tanstack/react-query';
 
 import { API_ENDPOINTS, http } from '@shared/api';
 
@@ -89,7 +89,7 @@ const selectShowcaseFeed = (pages: ShowcaseFeedResponse[]): ShowcaseFeed => {
 };
 
 export const useShowcaseFeedQuery = (theme?: string) => {
-  return useInfiniteQuery({
+  return useSuspenseInfiniteQuery({
     queryKey: showcaseQueryKeys.feed(theme),
     queryFn: ({ pageParam }) =>
       getShowcaseFeed({

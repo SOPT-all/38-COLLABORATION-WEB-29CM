@@ -9,7 +9,7 @@ const HomeMenu = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   const { data } = useNavQuery();
-  const categories = data?.categories ?? [];
+  const categories = data.categories;
   const hoveredCategory = categories.find((c) => c.topCategoryId === hoveredId);
   const hoveredMiddleCategories =
     hoveredCategory && hoveredCategory.middleCategories.length > 0

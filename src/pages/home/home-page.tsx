@@ -1,14 +1,16 @@
+import { useViewerType } from '@shared/auth/viewer-type';
 import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
 
 import { useHomeCarouselsQuery } from './api/carousels';
 import { useHomeMainQuery } from './api/main';
 import BannerCarousel from './components/banner-carousel/banner-carousel';
-import ShortcutSection from './components/home-shortcut/shortcut-section';
 import { CATEGORIES } from './components/home-menu/constants';
 import HomeMenu from './components/home-menu/home-menu';
+import ShortcutSection from './components/home-shortcut/shortcut-section';
 import ProductSelectionSection from './components/product-selection-section/product-selection-section';
 
 const HomePage = () => {
+  const { viewerType } = useViewerType();
   const { data: carousels = [] } = useHomeCarouselsQuery();
   const {
     data: main = { sections: [], shortcuts: [] },
@@ -17,7 +19,7 @@ const HomePage = () => {
     isFetchingNextPage,
     isLoading,
     isError,
-  } = useHomeMainQuery('guest');
+  } = useHomeMainQuery(viewerType);
 
   const observerTargetRef = useInfiniteScroll({
     fetchNextPage,

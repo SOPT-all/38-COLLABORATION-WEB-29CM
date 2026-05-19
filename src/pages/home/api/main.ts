@@ -1,9 +1,10 @@
-import { useInfiniteQuery } from '@tanstack/react-query';
+import { keepPreviousData, useInfiniteQuery } from '@tanstack/react-query';
 
 import { homeQueryKeys } from '@pages/home/api/query-keys';
-import type { Section, ShortCut, ViewerType } from '@pages/home/types';
+import type { Section, ShortCut } from '@pages/home/types';
 
 import { API_ENDPOINTS, http } from '@shared/api';
+import type { ViewerType } from '@shared/auth/viewer-type';
 
 const HOME_MAIN_SIZE = 5;
 
@@ -57,6 +58,7 @@ export const useHomeMainQuery = (viewerType: ViewerType) => {
     initialPageParam: undefined as string | undefined,
     getNextPageParam: ({ pageInfo }) =>
       pageInfo.hasNext && pageInfo.nextCursor ? pageInfo.nextCursor : undefined,
+    placeholderData: keepPreviousData,
     select: ({ pages }) => selectHomeMain(pages),
   });
 };

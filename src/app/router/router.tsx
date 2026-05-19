@@ -11,12 +11,9 @@ import HomeSkeleton from '@shared/ui/skeleton/home-skeleton';
 import ShowcaseSkeleton from '@shared/ui/skeleton/showcase-skeleton';
 import DeferredComponent from '@shared/ui/deferred-component';
 
-const fallback = () => <div>Loading...</div>;
-
 export const router = createBrowserRouter([
   {
     Component: Layout,
-    HydrateFallback: fallback,
     ErrorBoundary: ErrorPage,
     children: [
       {

@@ -6,6 +6,7 @@ const meta = {
   title: 'Home/product/product-item',
   component: ProductItem,
   args: {
+    selectionId: 1,
     className: 'w-[384px]',
     imageUrl: 'https://picsum.photos/400',
     title: '왕수빈이 고른 노티아',

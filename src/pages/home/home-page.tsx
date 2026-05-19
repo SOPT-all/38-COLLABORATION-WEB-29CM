@@ -3,13 +3,19 @@ import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
 import { useHomeCarouselsQuery } from './api/carousels';
 import { useHomeMainQuery } from './api/main';
 import BannerCarousel from './components/banner-carousel/banner-carousel';
-import ShortcutSection from './components/home-shortcut/shortcut-section';
 import { CATEGORIES } from './components/home-menu/constants';
 import HomeMenu from './components/home-menu/home-menu';
+import ShortcutSection from './components/home-shortcut/shortcut-section';
 import ProductSelectionSection from './components/product-selection-section/product-selection-section';
+import { useToggleProductLikeMutation } from './hooks/use-toggle-product-like-mutation';
+import type { ViewerType } from './types';
 
 const HomePage = () => {
+  // TODO: 추후 인증 상태를 확인해 로그인 사용자는 'user', 비로그인 사용자는 'guest'로 설정
+  const viewerType: ViewerType = 'user';
+
   const { data: carousels = [] } = useHomeCarouselsQuery();
+  const { toggleProductLike } = useToggleProductLikeMutation(viewerType);
   const {
     data: main = { sections: [], shortcuts: [] },
     fetchNextPage,
@@ -17,7 +23,7 @@ const HomePage = () => {
     isFetchingNextPage,
     isLoading,
     isError,
-  } = useHomeMainQuery('guest');
+  } = useHomeMainQuery(viewerType);
 
   const observerTargetRef = useInfiniteScroll({
     fetchNextPage,
@@ -39,7 +45,11 @@ const HomePage = () => {
       <BannerCarousel images={carousels} />
       <ShortcutSection shortcuts={main.shortcuts} />
       {main.sections.map((section) => (
-        <ProductSelectionSection key={section.sectionId} section={section} />
+        <ProductSelectionSection
+          key={section.sectionId}
+          section={section}
+          onToggleLike={toggleProductLike}
+        />
       ))}
       <div ref={observerTargetRef} className="h-1" />
     </>

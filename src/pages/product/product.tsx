@@ -1,6 +1,6 @@
-import Image from '@shared/ui/image/image';
-
 import ProductItem from '@pages/home/components/product/product-item';
+
+import Image from '@shared/ui/image/image';
 
 import { PRODUCT_SECTION } from './constants';
 
@@ -20,7 +20,7 @@ const ProductPage = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 px-9">
+      <div className="grid grid-cols-2 px-9 md:grid-cols-3 xl:grid-cols-4">
         {selections.map((selection) => (
           <ProductItem key={selection.selectionId} {...selection} />
         ))}

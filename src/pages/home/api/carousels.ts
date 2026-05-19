@@ -1,4 +1,4 @@
-import { queryOptions, useQuery } from '@tanstack/react-query';
+import { queryOptions, useSuspenseQuery } from '@tanstack/react-query';
 
 import { API_ENDPOINTS, http } from '@shared/api';
 
@@ -29,5 +29,5 @@ const homeCarouselsQueryOptions = queryOptions({
 });
 
 export const useHomeCarouselsQuery = () => {
-  return useQuery(homeCarouselsQueryOptions);
+  return useSuspenseQuery(homeCarouselsQueryOptions);
 };

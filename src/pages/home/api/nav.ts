@@ -1,4 +1,4 @@
-import { queryOptions, useQuery } from '@tanstack/react-query';
+import { queryOptions, useSuspenseQuery } from '@tanstack/react-query';
 
 import { API_ENDPOINTS, http } from '@shared/api';
 
@@ -17,4 +17,4 @@ const navQueryOptions = queryOptions({
   staleTime: 1000 * 60 * 5,
 });
 
-export const useNavQuery = () => useQuery(navQueryOptions);
+export const useNavQuery = () => useSuspenseQuery(navQueryOptions);

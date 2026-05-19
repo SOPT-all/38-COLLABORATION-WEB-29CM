@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 
 import { useViewerType } from '@shared/auth/viewer-type';
 import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
@@ -14,19 +15,17 @@ import ProductSelectionSection from './components/product-selection-section/prod
 import { useToggleProductLikeMutation } from './hooks/use-toggle-product-like-mutation';
 
 const HomePage = () => {
+  const navigate = useNavigate();
+  const { data: images } = useHomeCarouselsQuery();
   const [isInfiniteScrollEnabled, setIsInfiniteScrollEnabled] = useState(false);
 
   const { viewerType } = useViewerType();
-
-  const { data: carousels = [] } = useHomeCarouselsQuery();
   const { toggleProductLike } = useToggleProductLikeMutation(viewerType);
   const {
-    data: main = { sections: [], shortcuts: [] },
+    data: main,
     fetchNextPage,
     hasNextPage,
     isFetchingNextPage,
-    isLoading,
-    isError,
   } = useHomeMainQuery(viewerType);
 
   const observerTargetRef = useInfiniteScroll({
@@ -43,24 +42,17 @@ const HomePage = () => {
     fetchNextPage();
   };
 
-  if (isLoading) {
-    return null;
-  }
-
-  if (isError) {
-    return <div className="px-9 py-16">데이터를 불러오지 못했습니다.</div>;
-  }
-
   return (
-    <div className="pb-10">
+    <div className="min-w-[1440px] pb-10">
       <HomeMenu />
-      <BannerCarousel images={carousels} />
+      <BannerCarousel images={images} />
       <ShortcutSection shortcuts={main.shortcuts} />
       {main.sections.map((section) => (
         <ProductSelectionSection
           key={section.sectionId}
           section={section}
           onToggleLike={toggleProductLike}
+          onClickMore={() => navigate('/product')}
         />
       ))}
       {shouldShowMoreButton && (

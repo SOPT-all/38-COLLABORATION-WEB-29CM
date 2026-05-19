@@ -1,9 +1,8 @@
 import BannerCarousel from './components/banner-carousel/banner-carousel';
-import { CATEGORIES } from './components/home-menu/constants';
+import ShortcutSection from './components/home-shortcut/shortcut-section';
 import HomeMenu from './components/home-menu/home-menu';
 import ProductSelectionSection from './components/product-selection-section/product-selection-section';
 import { Suspense } from 'react';
-import ShortcutSection from './components/home-shortcut/shortcut-section';
 import { useHomeMainQuery } from './api/main';
 import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
 
@@ -32,15 +31,8 @@ const HomePage = () => {
   }
   return (
     <>
-      <HomeMenu categories={CATEGORIES} />
-      <Suspense
-        fallback={
-          <div className="aspect-20/9 w-full animate-pulse bg-gray-200" />
-        }
-      >
-        <BannerCarousel />
-      </Suspense>
-
+      <HomeMenu />
+      <BannerCarousel />
       <ShortcutSection shortcuts={main.shortcuts} />
       {main.sections.map((section) => (
         <ProductSelectionSection key={section.sectionId} section={section} />

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
+import FloatingScrollTopButton from '@shared/ui/floating-scroll-top-button/floating-scroll-top-button';
 
 import { useHomeCarouselsQuery } from './api/carousels';
 import { useHomeMainQuery } from './api/main';
@@ -60,6 +61,7 @@ const HomePage = () => {
         </div>
       )}
       <div ref={observerTargetRef} className="h-1" />
+      <FloatingScrollTopButton />
     </div>
   );
 };

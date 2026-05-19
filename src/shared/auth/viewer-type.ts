@@ -18,6 +18,8 @@ export const getViewerType = (): ViewerType => {
 };
 
 export const setViewerType = (viewerType: ViewerType) => {
+  if (typeof window === 'undefined') return;
+
   window.localStorage.setItem(VIEWER_TYPE_STORAGE_KEY, viewerType);
   window.dispatchEvent(new Event(VIEWER_TYPE_CHANGE_EVENT));
 };

@@ -23,12 +23,18 @@ export const setViewerType = (viewerType: ViewerType) => {
 };
 
 const subscribeViewerType = (onStoreChange: () => void) => {
+  const handleStorageChange = (event: StorageEvent) => {
+    if (event.key === VIEWER_TYPE_STORAGE_KEY) {
+      onStoreChange();
+    }
+  };
+
   window.addEventListener(VIEWER_TYPE_CHANGE_EVENT, onStoreChange);
-  window.addEventListener('storage', onStoreChange);
+  window.addEventListener('storage', handleStorageChange);
 
   return () => {
     window.removeEventListener(VIEWER_TYPE_CHANGE_EVENT, onStoreChange);
-    window.removeEventListener('storage', onStoreChange);
+    window.removeEventListener('storage', handleStorageChange);
   };
 };
 

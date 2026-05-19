@@ -1,9 +1,9 @@
+import type { Product } from '@pages/home/types';
+
 import { HeartBlankedIcon, HeartFilledIcon } from '@shared/icons';
 import Chip from '@shared/ui/chip/chip';
 import Image from '@shared/ui/image/image';
 import { formatCompactCount } from '@shared/utils/format-count';
-
-import type { Product } from './types';
 
 interface ProductListItemProps extends Product {
   onToggleLike?: () => void;

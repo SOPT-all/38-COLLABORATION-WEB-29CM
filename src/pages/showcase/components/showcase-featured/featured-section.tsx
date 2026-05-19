@@ -1,16 +1,8 @@
+import type { Showcase } from '../../types';
 import ShowcaseCard from '../showcase-card/showcase-card';
 
-interface FeaturedItem {
-  showcaseId: number;
-  title: string;
-  description: string;
-  imageUrl: string;
-  startDate: string;
-  endDate: string;
-}
-
 interface FeaturedSectionProps {
-  featured: FeaturedItem[];
+  featured: Showcase[];
 }
 
 const FeaturedSection = ({ featured }: FeaturedSectionProps) => {

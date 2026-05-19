@@ -1,4 +1,4 @@
-import { keepPreviousData, useInfiniteQuery } from '@tanstack/react-query';
+import { useInfiniteQuery } from '@tanstack/react-query';
 
 import { homeQueryKeys } from '@pages/home/api/query-keys';
 import type { Section, ShortCut } from '@pages/home/types';
@@ -58,7 +58,6 @@ export const useHomeMainQuery = (viewerType: ViewerType) => {
     initialPageParam: undefined as string | undefined,
     getNextPageParam: ({ pageInfo }) =>
       pageInfo.hasNext && pageInfo.nextCursor ? pageInfo.nextCursor : undefined,
-    placeholderData: keepPreviousData,
     select: ({ pages }) => selectHomeMain(pages),
   });
 };

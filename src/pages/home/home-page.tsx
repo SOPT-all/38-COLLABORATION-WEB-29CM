@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router';
+
 import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
 
 import { useHomeCarouselsQuery } from './api/carousels';
@@ -9,6 +11,7 @@ import HomeMenu from './components/home-menu/home-menu';
 import ProductSelectionSection from './components/product-selection-section/product-selection-section';
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const { data: carousels = [] } = useHomeCarouselsQuery();
   const {
     data: main = { sections: [], shortcuts: [] },
@@ -39,7 +42,11 @@ const HomePage = () => {
       <BannerCarousel images={carousels} />
       <ShortcutSection shortcuts={main.shortcuts} />
       {main.sections.map((section) => (
-        <ProductSelectionSection key={section.sectionId} section={section} />
+        <ProductSelectionSection
+          key={section.sectionId}
+          section={section}
+          onClickMore={() => navigate('/product')}
+        />
       ))}
       <div ref={observerTargetRef} className="h-1" />
     </>

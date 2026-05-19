@@ -43,7 +43,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-w-[1440px] pb-10">
+    <div className="pb-10">
       <HomeMenu />
       <BannerCarousel images={images} />
       <ShortcutSection shortcuts={main.shortcuts} />

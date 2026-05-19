@@ -1,6 +1,7 @@
 import { useViewerType } from '@shared/auth/viewer-type';
 
 import { ACTION_ITEMS } from './constants';
+import type { ActionItem } from './constants';
 
 interface HeaderActionItemsProps {
   iconClassName: string;
@@ -8,30 +9,45 @@ interface HeaderActionItemsProps {
   showLabel?: boolean;
 }
 
+const isLoginActionItem = (
+  actionItem: ActionItem,
+): actionItem is Extract<ActionItem, { type: 'login' }> => {
+  return actionItem.type === 'login';
+};
+
 const HeaderActionItems = ({
   iconClassName,
   buttonClassName = '',
   showLabel = false,
 }: HeaderActionItemsProps) => {
-  const { viewerType, login } = useViewerType();
-  const actionItems = ACTION_ITEMS.filter(
-    ({ type }) => viewerType !== 'user' || type !== 'login',
-  );
+  const { viewerType, login, logout } = useViewerType();
+  const isLoggedIn = viewerType === 'user';
+  const handleLoginClick = isLoggedIn ? logout : login;
 
   return (
     <>
-      {actionItems.map(({ type, label, icon: Icon, ariaLabel }) => (
-        <button
-          key={type}
-          aria-label={ariaLabel}
-          type="button"
-          onClick={type === 'login' ? login : undefined}
-          className={buttonClassName}
-        >
-          <Icon className={iconClassName} />
-          {showLabel && label}
-        </button>
-      ))}
+      {ACTION_ITEMS.map((actionItem) => {
+        const { type, label, icon: Icon, ariaLabel } = actionItem;
+        const isLoginAction = isLoginActionItem(actionItem);
+        const actionLabel =
+          isLoginAction && isLoggedIn ? actionItem.loggedIn.label : label;
+        const actionAriaLabel =
+          isLoginAction && isLoggedIn
+            ? actionItem.loggedIn.ariaLabel
+            : ariaLabel;
+        return (
+          <button
+            key={type}
+            aria-label={actionAriaLabel}
+            type="button"
+            onClick={isLoginAction ? handleLoginClick : undefined}
+            className={buttonClassName}
+          >
+            <Icon className={iconClassName} />
+            {showLabel && actionLabel}
+          </button>
+        );
+      })}
     </>
   );
 };

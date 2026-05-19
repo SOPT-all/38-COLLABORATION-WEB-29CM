@@ -53,5 +53,9 @@ export const useViewerType = () => {
     setViewerType('user');
   }, []);
 
-  return { viewerType, login };
+  const logout = useCallback(() => {
+    setViewerType('guest');
+  }, []);
+
+  return { viewerType, login, logout };
 };

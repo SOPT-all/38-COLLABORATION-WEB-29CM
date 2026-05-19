@@ -1,4 +1,4 @@
-import type { ViewerType } from '@pages/home/types';
+import type { ViewerType } from '@shared/auth/viewer-type';
 
 export const homeQueryKeys = {
   all: ['home'] as const,

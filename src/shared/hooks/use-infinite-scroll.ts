@@ -4,12 +4,14 @@ interface UseInfiniteScrollParams {
   hasNextPage: boolean;
   isFetchingNextPage: boolean;
   fetchNextPage: () => void;
+  enabled?: boolean;
 }
 
 export const useInfiniteScroll = ({
   hasNextPage,
   isFetchingNextPage,
   fetchNextPage,
+  enabled = true,
 }: UseInfiniteScrollParams) => {
   const observerTargetRef = useRef<HTMLDivElement | null>(null);
   const isFetchingNextPageRef = useRef(isFetchingNextPage);
@@ -21,7 +23,7 @@ export const useInfiniteScroll = ({
   useEffect(() => {
     const observerTarget = observerTargetRef.current;
 
-    if (!observerTarget || !hasNextPage) {
+    if (!enabled || !observerTarget || !hasNextPage) {
       return;
     }
 
@@ -41,7 +43,7 @@ export const useInfiniteScroll = ({
     return () => {
       observer.disconnect();
     };
-  }, [fetchNextPage, hasNextPage]);
+  }, [enabled, fetchNextPage, hasNextPage]);
 
   return observerTargetRef;
 };

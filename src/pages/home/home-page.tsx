@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 
 import { useViewerType } from '@shared/auth/viewer-type';
 import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
@@ -14,6 +15,7 @@ import ProductSelectionSection from './components/product-selection-section/prod
 import { useToggleProductLikeMutation } from './hooks/use-toggle-product-like-mutation';
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const { data: images } = useHomeCarouselsQuery();
   const [isInfiniteScrollEnabled, setIsInfiniteScrollEnabled] = useState(false);
 
@@ -41,7 +43,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="pb-10">
+    <div className="min-w-[1440px] pb-10">
       <HomeMenu />
       <BannerCarousel images={images} />
       <ShortcutSection shortcuts={main.shortcuts} />
@@ -50,6 +52,7 @@ const HomePage = () => {
           key={section.sectionId}
           section={section}
           onToggleLike={toggleProductLike}
+          onClickMore={() => navigate('/product')}
         />
       ))}
       {shouldShowMoreButton && (

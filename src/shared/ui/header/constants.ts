@@ -36,8 +36,14 @@ export const ACTION_ITEMS = [
     label: 'LOGIN',
     icon: LoginIcon,
     ariaLabel: '로그인',
+    loggedIn: {
+      label: 'LOGOUT',
+      ariaLabel: '로그아웃',
+    },
   },
 ] as const;
+
+export type ActionItem = (typeof ACTION_ITEMS)[number];
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Shopping' },

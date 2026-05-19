@@ -1,10 +1,11 @@
+import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
+
+import { useHomeCarouselsQuery } from './api/carousels';
+import { useHomeMainQuery } from './api/main';
 import BannerCarousel from './components/banner-carousel/banner-carousel';
 import ShortcutSection from './components/home-shortcut/shortcut-section';
 import HomeMenu from './components/home-menu/home-menu';
 import ProductSelectionSection from './components/product-selection-section/product-selection-section';
-import { useHomeMainQuery } from './api/main';
-import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
-import { useHomeCarouselsQuery } from './api/carousels';
 
 const HomePage = () => {
   const { data: images } = useHomeCarouselsQuery();

@@ -4,7 +4,6 @@ import { useHomeCarouselsQuery } from './api/carousels';
 import { useHomeMainQuery } from './api/main';
 import BannerCarousel from './components/banner-carousel/banner-carousel';
 import ShortcutSection from './components/home-shortcut/shortcut-section';
-import { CATEGORIES } from './components/home-menu/constants';
 import HomeMenu from './components/home-menu/home-menu';
 import ProductSelectionSection from './components/product-selection-section/product-selection-section';
 
@@ -35,7 +34,7 @@ const HomePage = () => {
 
   return (
     <>
-      <HomeMenu categories={CATEGORIES} />
+      <HomeMenu />
       <BannerCarousel images={carousels} />
       <ShortcutSection shortcuts={main.shortcuts} />
       {main.sections.map((section) => (

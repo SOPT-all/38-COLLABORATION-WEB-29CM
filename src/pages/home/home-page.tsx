@@ -37,7 +37,7 @@ const HomePage = () => {
 
   return (
     <>
-      <HomeMenu categories={CATEGORIES} />
+      <HomeMenu />
       <BannerCarousel images={carousels} />
       <ShortcutSection shortcuts={main.shortcuts} />
       {main.sections.map((section) => (

@@ -4,6 +4,7 @@ import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
 import { useHomeCarouselsQuery } from './api/carousels';
 import { useHomeMainQuery } from './api/main';
 import BannerCarousel from './components/banner-carousel/banner-carousel';
+
 import HomeMenu from './components/home-menu/home-menu';
 import ShortcutSection from './components/home-shortcut/shortcut-section';
 import ProductSelectionSection from './components/product-selection-section/product-selection-section';

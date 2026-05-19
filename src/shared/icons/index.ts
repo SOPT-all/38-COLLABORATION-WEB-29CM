@@ -3,6 +3,7 @@ export { default as ChevronRightIcon } from './assets/icn-chevron-right.svg?reac
 export { default as ChevronRightSmallIcon } from './assets/icn-chevron-right-small.svg?react';
 export { default as ChevronUpIcon } from './assets/icn-chevron-up.svg?react';
 export { default as ChevronUpSmallIcon } from './assets/icn-chevron-up-small.svg?react';
+export { default as ChevronDownIcon } from './assets/icn-chevron-down.svg?react';
 export { default as HeartBlankedIcon } from './assets/icn-heart-blanked.svg?react';
 export { default as HeartFilledIcon } from './assets/icn-heart-filled.svg?react';
 export { default as LoginIcon } from './assets/icn-login.svg?react';
@@ -11,3 +12,9 @@ export { default as ShoppingbagIcon } from './assets/icn-shoppingbag.svg?react';
 export { default as StopIcon } from './assets/icn-stop.svg?react';
 export { default as TopBottomIcon } from './assets/icn-top-bottom.svg?react';
 export { default as UsercircleIcon } from './assets/icn-usercircle.svg?react';
+export { default as Logo29cmIcon } from './assets/icn-logo.svg?react';
+export { default as InstagramIcon } from './assets/icn-footer-instagram.svg?react';
+export { default as YoutubeIcon } from './assets/icn-footer-youtube.svg?react';
+export { default as AppleIcon } from './assets/icn-footer-apple.svg?react';
+export { default as GooglePlayIcon } from './assets/icn-footer-googleplay.svg?react';
+export { default as BarIcon } from './assets/icn-bar.svg?react';

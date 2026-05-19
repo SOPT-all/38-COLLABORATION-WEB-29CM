@@ -13,12 +13,12 @@ export const http = {
     return response.data.data;
   },
 
-  post: async <TData, TBody = unknown>(
+  patch: async <TData, TBody = unknown>(
     url: string,
     data?: TBody,
     config?: AxiosRequestConfig,
   ): Promise<TData> => {
-    const response = await axiosInstance.post<ApiResponse<TData>>(
+    const response = await axiosInstance.patch<ApiResponse<TData>>(
       url,
       data,
       config,

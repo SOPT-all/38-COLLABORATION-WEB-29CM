@@ -1,14 +1,35 @@
 import BannerCarousel from './components/banner-carousel/banner-carousel';
-import CategorySection from './components/home-category/category-section';
 import { CATEGORIES } from './components/home-menu/constants';
 import HomeMenu from './components/home-menu/home-menu';
 import ProductSelectionSection from './components/product-selection-section/product-selection-section';
-import { SECTIONS, SHORTCUTS } from './constants';
-import DeferredComponent from '@shared/ui/deferred-component';
 import { Suspense } from 'react';
-import ProductSelectionSkeleton from '@shared/ui/skeleton/product-selection-skeleton';
+import ShortcutSection from './components/home-shortcut/shortcut-section';
+import { useHomeMainQuery } from './api/main';
+import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
 
 const HomePage = () => {
+  const {
+    data: main,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+    isLoading,
+    isError,
+  } = useHomeMainQuery('guest');
+
+  const observerTargetRef = useInfiniteScroll({
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+  });
+
+  if (isLoading) {
+    return null;
+  }
+
+  if (isError) {
+    return <div className="px-9 py-16">데이터를 불러오지 못했습니다.</div>;
+  }
   return (
     <>
       <HomeMenu categories={CATEGORIES} />
@@ -20,19 +41,11 @@ const HomePage = () => {
         <BannerCarousel />
       </Suspense>
 
-      <CategorySection categories={SHORTCUTS} />
-      {SECTIONS.map((section) => (
-        <Suspense
-          key={section.sectionId}
-          fallback={
-            <DeferredComponent>
-              <ProductSelectionSkeleton />
-            </DeferredComponent>
-          }
-        >
-          <ProductSelectionSection section={section} />
-        </Suspense>
+      <ShortcutSection shortcuts={main.shortcuts} />
+      {main.sections.map((section) => (
+        <ProductSelectionSection key={section.sectionId} section={section} />
       ))}
+      <div ref={observerTargetRef} className="h-1" />
     </>
   );
 };

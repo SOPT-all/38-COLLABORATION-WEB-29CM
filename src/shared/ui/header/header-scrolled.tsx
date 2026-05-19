@@ -2,17 +2,12 @@ import { Link } from 'react-router';
 
 import { ROUTE_PATH } from '@app/router/path';
 
-import { useViewerType } from '@shared/auth/viewer-type';
 import { Logo29cmIcon, SearchIcon } from '@shared/icons';
 
-import { ACTION_ITEMS, NAV_ITEMS } from './constants';
+import { NAV_ITEMS } from './constants';
+import HeaderActionItems from './header-action-items';
 
 const HeaderScrolled = () => {
-  const { viewerType, login } = useViewerType();
-  const actionItems = ACTION_ITEMS.filter(
-    ({ type }) => viewerType !== 'user' || type !== 'login',
-  );
-
   return (
     <div className="flex w-full items-start justify-between px-9 pb-2.5">
       {/* left */}
@@ -36,16 +31,7 @@ const HeaderScrolled = () => {
 
       {/* right */}
       <div className="flex items-center gap-2">
-        {actionItems.map(({ type, label, icon: Icon, ariaLabel }) => (
-          <button
-            key={label}
-            aria-label={ariaLabel}
-            type="button"
-            onClick={type === 'login' ? login : undefined}
-          >
-            <Icon className="h-5 w-5" />
-          </button>
-        ))}
+        <HeaderActionItems iconClassName="h-5 w-5" />
 
         <button aria-label="검색" type="button">
           <SearchIcon className="h-5 w-5" />

@@ -13,7 +13,7 @@ interface HomePageInfo {
   size: number;
 }
 
-interface HomeMainResponse {
+export interface HomeMainResponse {
   shortcuts: ShortCut[];
   sections: Section[];
   pageInfo: HomePageInfo;

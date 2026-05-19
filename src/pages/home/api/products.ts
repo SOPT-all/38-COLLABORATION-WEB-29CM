@@ -1,6 +1,5 @@
-import type { ViewerType } from '@pages/home/types';
-
 import { API_ENDPOINTS, http } from '@shared/api';
+import type { ViewerType } from '@shared/auth/viewer-type';
 
 interface ToggleProductLikeResponse {
   productId: number;

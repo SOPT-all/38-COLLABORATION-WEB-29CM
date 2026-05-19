@@ -1,3 +1,4 @@
+import { useViewerType } from '@shared/auth/viewer-type';
 import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
 
 import { useHomeCarouselsQuery } from './api/carousels';
@@ -7,12 +8,9 @@ import HomeMenu from './components/home-menu/home-menu';
 import ShortcutSection from './components/home-shortcut/shortcut-section';
 import ProductSelectionSection from './components/product-selection-section/product-selection-section';
 import { useToggleProductLikeMutation } from './hooks/use-toggle-product-like-mutation';
-import type { ViewerType } from './types';
 
 const HomePage = () => {
-  // TODO: 추후 인증 상태를 확인해 로그인 사용자는 'user', 비로그인 사용자는 'guest'로 설정
-  const viewerType: ViewerType = 'user';
-
+  const { viewerType } = useViewerType();
   const { data: carousels = [] } = useHomeCarouselsQuery();
   const { toggleProductLike } = useToggleProductLikeMutation(viewerType);
   const {

@@ -4,7 +4,8 @@ import { ROUTE_PATH } from '@app/router/path';
 
 import { Logo29cmIcon, SearchIcon } from '@shared/icons';
 
-import { ACTION_ITEMS, NAV_ITEMS, SUB_NAV_ITEMS } from './constants';
+import { NAV_ITEMS, SUB_NAV_ITEMS } from './constants';
+import HeaderActionItems from './header-action-items';
 
 const HeaderDefault = () => {
   return (
@@ -47,17 +48,11 @@ const HeaderDefault = () => {
       {/* right */}
       <div className="flex flex-col items-end gap-4">
         <div className="flex items-center gap-3.5 px-0.5">
-          {ACTION_ITEMS.map(({ label, icon: Icon, ariaLabel }) => (
-            <button
-              key={label}
-              aria-label={ariaLabel}
-              type="button"
-              className="text-caption-02-regular flex items-center gap-0.5 whitespace-nowrap text-black"
-            >
-              <Icon className="h-[14px] w-[14px]" />
-              {label}
-            </button>
-          ))}
+          <HeaderActionItems
+            showLabel
+            iconClassName="h-[14px] w-[14px]"
+            buttonClassName="text-caption-02-regular flex items-center gap-0.5 whitespace-nowrap text-black"
+          />
         </div>
 
         <button aria-label="검색" type="button">

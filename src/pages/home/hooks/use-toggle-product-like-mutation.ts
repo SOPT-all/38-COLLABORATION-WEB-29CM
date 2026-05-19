@@ -4,7 +4,8 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import type { HomeMainResponse } from '@pages/home/api/main';
 import { patchProductLike } from '@pages/home/api/products';
 import { homeQueryKeys } from '@pages/home/api/query-keys';
-import type { Product, ViewerType } from '@pages/home/types';
+import type { Product } from '@pages/home/types';
+import type { ViewerType } from '@shared/auth/viewer-type';
 
 const updateHomeMainProduct = (
   data: InfiniteData<HomeMainResponse> | undefined,

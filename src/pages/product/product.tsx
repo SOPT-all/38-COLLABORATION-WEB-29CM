@@ -1,11 +1,13 @@
+import { useHomeMainQuery } from '@pages/home/api/main';
 import ProductItem from '@pages/home/components/product/product-item';
 
 import Image from '@shared/ui/image/image';
 
-import { PRODUCT_SECTION } from './constants';
-
 const ProductPage = () => {
-  const { heroImageUrl, title, description, selections } = PRODUCT_SECTION;
+  const { data } = useHomeMainQuery('guest');
+  const firstSection = data?.sections[0];
+  const allSelections = data?.sections.flatMap((s) => s.selections).slice(0, 15) ?? [];
+  const { heroImageUrl = '', title = '', description = '' } = firstSection ?? {};
 
   return (
     <div>
@@ -21,7 +23,7 @@ const ProductPage = () => {
       </div>
 
       <div className="grid grid-cols-2 px-9 md:grid-cols-3 xl:grid-cols-4">
-        {selections.map((selection) => (
+        {allSelections.map((selection) => (
           <ProductItem key={selection.selectionId} {...selection} />
         ))}
       </div>

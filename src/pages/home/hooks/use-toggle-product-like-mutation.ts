@@ -1,11 +1,12 @@
 import type { InfiniteData } from '@tanstack/react-query';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import axios from 'axios';
 
 import type { HomeMainResponse } from '@pages/home/api/main';
 import { patchProductLike } from '@pages/home/api/products';
 import { homeQueryKeys } from '@pages/home/api/query-keys';
 import type { Product, ViewerType } from '@pages/home/types';
+
+import { isAxiosStatusError } from '@shared/api';
 
 const updateHomeMainProduct = (
   data: InfiniteData<HomeMainResponse> | undefined,
@@ -68,7 +69,7 @@ export const useToggleProductLikeMutation = (viewerType: ViewerType) => {
           queryClient.setQueryData(queryKey, context.previousData);
         }
 
-        if (axios.isAxiosError(error) && error.response?.status === 403) {
+        if (isAxiosStatusError(error, 403)) {
           alert('로그인이 필요한 기능입니다.');
           return;
         }

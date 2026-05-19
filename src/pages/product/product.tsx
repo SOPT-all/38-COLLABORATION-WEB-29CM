@@ -18,7 +18,12 @@ const ProductPage = () => {
     <div>
       <div className="px-9 pt-10 pb-7">
         <div className="relative aspect-[1294/509] w-full overflow-hidden">
-          <Image src={heroImageUrl} alt={title} className="h-full w-full" />
+          <Image
+            src={heroImageUrl}
+            alt={title}
+            className="h-full w-full"
+            style={{ objectPosition: 'center 10%' }}
+          />
           <div className="bg-gray-linear-800 absolute bottom-0 h-[210px] w-full" />
           <div className="absolute bottom-8.5 left-8.5 text-white">
             <h1 className="text-title-01">{title}</h1>

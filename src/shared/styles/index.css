@@ -101,6 +101,10 @@
   );
 }
 
+@utility bg-white-linear {
+  background-image: linear-gradient(0deg, #fff 0%, #ffffff00 100%);
+}
+
 @utility text-subtitle-03-prompt {
   font-family: 'Prompt', sans-serif;
   font-size: 12px;

@@ -54,7 +54,7 @@ const HomePage = () => {
         <ProductSelectionSection key={section.sectionId} section={section} />
       ))}
       {shouldShowMoreButton && (
-        <div className="relative -mt-140 flex h-144 items-end justify-center bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#fff_64%)] pb-12">
+        <div className="bg-white-linear relative -mt-140 flex h-144 items-end justify-center pb-12">
           <MoreLoadButton
             onClick={handleClickMore}
             disabled={isFetchingNextPage}

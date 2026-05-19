@@ -1,4 +1,5 @@
 import { useInfiniteScroll } from '@shared/hooks/use-infinite-scroll';
+import FloatingScrollTopButton from '@shared/ui/floating-scroll-top-button/floating-scroll-top-button';
 
 import { useShowcaseFeedQuery } from './api/showcases';
 import ContentSection from './components/showcase-content/content-section';
@@ -29,6 +30,7 @@ const ShowcasePage = () => {
         <ContentSection key={section.sectionId} section={section} />
       ))}
       <div ref={observerTargetRef} className="h-1" />
+      <FloatingScrollTopButton />
     </>
   );
 };

@@ -1,9 +1,10 @@
 import { useSuspenseInfiniteQuery } from '@tanstack/react-query';
 
 import { homeQueryKeys } from '@pages/home/api/query-keys';
-import type { Section, ShortCut, ViewerType } from '@pages/home/types';
+import type { Section, ShortCut } from '@pages/home/types';
 
 import { API_ENDPOINTS, http } from '@shared/api';
+import type { ViewerType } from '@shared/auth/viewer-type';
 
 const HOME_MAIN_SIZE = 5;
 
@@ -13,7 +14,7 @@ interface HomePageInfo {
   size: number;
 }
 
-interface HomeMainResponse {
+export interface HomeMainResponse {
   shortcuts: ShortCut[];
   sections: Section[];
   pageInfo: HomePageInfo;

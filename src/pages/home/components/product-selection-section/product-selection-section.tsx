@@ -34,7 +34,7 @@ const ProductSelectionSection = ({
       <div className="sticky top-21 aspect-578/680 h-[calc(100vh-84px)] shrink-0 self-start">
         <div className="relative h-full w-full overflow-hidden">
           <Image src={heroImageUrl} alt={title} />
-          <div className="bg-gray-linear-800 absolute bottom-0 h-[210px] w-full"></div>
+          <div className="bg-gray-linear-800 absolute bottom-0 h-[210px] w-full" />
           <div className="absolute bottom-8.5 left-8.5 text-white">
             <h2 className="text-title-01">{title}</h2>
             <p className="text-subtitle-01">{description}</p>

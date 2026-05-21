@@ -64,6 +64,8 @@ LET'S SOPT 38기 합동세미나 데스크탑 웹 3조 29cm 🛒
 
 ## 📁 팀원 별 구현 사항
 
+<img width="952" height="532" alt="스크린샷 2026-05-22 오전 1 39 58" src="https://github.com/user-attachments/assets/04dbc3c8-ec51-459e-9ef3-951f210e360b" />
+
 ### 📌 진석
 
 <img width="1103" height="612" alt="스크린샷 2026-05-21 오후 11 30 21" src="https://github.com/user-attachments/assets/d5bd7c68-d9c7-44fc-901f-f69afd878d6e" />
@@ -124,7 +126,10 @@ LET'S SOPT 38기 합동세미나 데스크탑 웹 3조 29cm 🛒
     │   │   └── home-page.tsx
     │   │
     │   ├── 📁 product
-    │   │   └── product.tsx
+    │   │   └── product-page.tsx
+    │   │
+    │   ├── 📁 error
+    │   │   └── error-page.tsx
     │   │
     │   └── 📁 showcase
     │       ├── 📁 api

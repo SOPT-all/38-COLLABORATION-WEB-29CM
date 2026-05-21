@@ -8,6 +8,7 @@ interface ShowcaseCardProps {
   description: string;
   startDate: string;
   endDate: string;
+  priority?: boolean;
 }
 
 const formatDate = (date: string) => date.replace(/-/g, '.');
@@ -19,6 +20,7 @@ const ShowcaseCard = ({
   description,
   startDate,
   endDate,
+  priority = false,
 }: ShowcaseCardProps) => (
   <div
     className={cn(
@@ -29,6 +31,9 @@ const ShowcaseCard = ({
     <Image
       src={imageUrl}
       alt={title}
+      loading={priority ? 'eager' : 'lazy'}
+      fetchPriority={priority ? 'high' : 'auto'}
+      decoding={priority ? 'sync' : 'async'}
       className={cn(
         'w-full object-cover',
         variant === 'big' ? 'h-[362px]' : 'h-[240px]',

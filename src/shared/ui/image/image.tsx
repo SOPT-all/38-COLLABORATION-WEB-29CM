@@ -13,6 +13,7 @@ const Image = ({
   alt,
   className,
   loading = 'lazy',
+  decoding = 'async',
   ...props
 }: ImageProps) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,17 +22,21 @@ const Image = ({
     setIsLoading(false);
   };
 
+  const handleError = () => {
+    setIsLoading(false);
+  };
+
   return (
     <div className={cn('relative overflow-hidden', className)}>
-      {isLoading && (
-        <div className="absolute inset-0 animate-pulse bg-gray-200" />
-      )}
+      {isLoading && <div className="animate-skeleton-wave absolute inset-0" />}
 
       <img
         src={src}
         alt={alt}
         loading={loading}
+        decoding={decoding}
         onLoad={handleLoad}
+        onError={handleError}
         className={cn(
           'h-full w-full object-cover',
           isLoading ? 'invisible' : '',

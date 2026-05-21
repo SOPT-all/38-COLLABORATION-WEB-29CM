@@ -28,9 +28,7 @@ const Image = ({
 
   return (
     <div className={cn('relative overflow-hidden', className)}>
-      {isLoading && (
-        <div className="absolute inset-0 animate-pulse bg-gray-200" />
-      )}
+      {isLoading && <div className="animate-skeleton-wave absolute inset-0" />}
 
       <img
         src={src}

@@ -13,11 +13,16 @@ const Image = ({
   alt,
   className,
   loading = 'lazy',
+  decoding = 'async',
   ...props
 }: ImageProps) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const handleLoad = () => {
+    setIsLoading(false);
+  };
+
+  const handleError = () => {
     setIsLoading(false);
   };
 
@@ -31,7 +36,9 @@ const Image = ({
         src={src}
         alt={alt}
         loading={loading}
+        decoding={decoding}
         onLoad={handleLoad}
+        onError={handleError}
         className={cn(
           'h-full w-full object-cover',
           isLoading ? 'invisible' : '',

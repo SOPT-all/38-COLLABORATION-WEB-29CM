@@ -62,6 +62,28 @@ LET'S SOPT 38기 합동세미나 데스크탑 웹 3조 29cm 🛒
 
 <br/>
 
+## 📁 팀원 별 구현 사항
+
+### 📌 진석
+
+<img width="1103" height="612" alt="스크린샷 2026-05-21 오후 11 30 21" src="https://github.com/user-attachments/assets/d5bd7c68-d9c7-44fc-901f-f69afd878d6e" />
+
+### 📌 혜원
+
+<img width="2170" height="1224" alt="image" src="https://github.com/user-attachments/assets/6e1e94ce-78e6-4b61-bff1-221d38f54a2b" />
+
+### 📌 채원
+
+<img width="1099" height="613" alt="스크린샷 2026-05-21 오후 11 31 18" src="https://github.com/user-attachments/assets/6fcbde4e-e850-4b95-993c-b2f2745f959a" />
+
+### 📌 우찬
+
+<img width="1102" height="611" alt="스크린샷 2026-05-21 오후 11 31 33" src="https://github.com/user-attachments/assets/93369092-a592-4f56-bd41-e1b5687b3998" />
+
+### 📌 현종
+
+<img width="1098" height="610" alt="스크린샷 2026-05-21 오후 11 31 54" src="https://github.com/user-attachments/assets/d10a7be5-1e7c-40e1-9138-cd396ba3acf4" />
+
 ## 🚀 Tech Stack
 
 | 카테고리                    | 기술 스택                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -77,7 +99,7 @@ LET'S SOPT 38기 합동세미나 데스크탑 웹 3조 29cm 🛒
 | **Deployment**              | ![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white&style=for-the-badge)                                                                                                                                                                                                                                                                                                                      |
 | **Cooperation**             | ![Notion](https://img.shields.io/badge/Notion-000000?logo=notion&logoColor=white&style=for-the-badge) ![Discord](https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white&style=for-the-badge) ![Figma](https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=white&style=for-the-badge) ![Swagger](https://img.shields.io/badge/Swagger-85EA2D?logo=swagger&logoColor=black&style=for-the-badge) |
 | **Formatting**              | ![ESLint](https://img.shields.io/badge/ESLint-4B3263?logo=eslint&logoColor=white&style=for-the-badge) ![Prettier](https://img.shields.io/badge/Prettier-1A2C34?logo=prettier&logoColor=F7BA3E&style=for-the-badge)                                                                                                                                                                                                         |
-| **UI Documentation**        | ![Storybook](https://img.shields.io/badge/Storybook-FF4785?logo=storybook&logoColor=white&style=for-the-badge)                                                                                                                                                                                                                                                                                                             |
+| **UI Documentation**        | ![Storybook](https://img.shields.io/badge/Storybook-FF4785?logo=storybook&logoColor=white&style=for-the-badge) ![Chromatic](https://img.shields.io/badge/Chromatic-FC521F?style=for-the-badge&logo=chromatic&logoColor=white)                                                                                                                                                                                              |
 
 <br/>
 

@@ -66,6 +66,15 @@ export const router = createBrowserRouter([
           return { Component: ProductPage };
         },
       },
+      {
+        path: ROUTE_PATH.PRODUCT_SHORTCUT,
+        lazy: async () => {
+          const { default: ProductPage } =
+            await import('@pages/product/product');
+
+          return { Component: ProductPage };
+        },
+      },
     ],
   },
 ]);
